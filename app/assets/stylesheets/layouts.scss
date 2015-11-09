@@ -1,0 +1,45 @@
+// Navbar
+.uk-navbar {
+	background-color: $primary-color;
+	border-radius: 0;
+	border: 0;
+	.uk-navbar-brand {
+		font-size: 1.8em;
+		color: $navbar-text-color;
+		text-shadow: 0 0 0;
+		font-weight: 800;
+		display: inline;
+		float: none;
+	}
+	.uk-navbar-nav li a {
+		color: $navbar-text-color;
+		text-shadow: 0 0 0;
+		text-transform: uppercase;
+		font-size: 1.3em;
+		font-weight: bold;
+		font-family: 'Comfortaa', cursive;
+		height: 81px;
+		padding-top: 18px;
+		&:hover {
+			background-color: lighten($primary-color, 10%);
+			color: $navbar-text-color;
+		}
+	}
+	.uk-navbar-nav > li:hover > a, .uk-navbar-nav > li > a:focus, .uk-navbar-nav > li.uk-open > a {
+		background-color: lighten($primary-color, 10%);
+		color: $navbar-text-color;
+	}
+}
+
+// FOOTER
+footer {
+	@extend .uk-block;
+	background-color: $primary-color;
+	div p {
+		color: $navbar-text-color;
+		font-weight: bold;
+		font-size: 1.2em;
+		font-family: 'Comfortaa', cursive;
+	}
+}
+

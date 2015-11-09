@@ -13,7 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require plugins
 //= require jquery.lettering
 //= require uikit
-//= require plugins
-//= require main
+//= require components/sticky
+//= require components/parallax
+//= require static_html

@@ -10,20 +10,18 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   	<title>ЖК "Новая Мытница"</title>
-  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   	<%= csrf_meta_tags %>
-  	<link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:700italic,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="<%= controller.controller_name %>">
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <%= render 'layouts/header'%>
-    <%= render 'layouts/notice'%>
-	<%= yield %>
-	<%= render 'layouts/footer'%>
+  <%= render 'layouts/header'%>
+  <%= render 'layouts/notice'%>
+  <main>
+    <%= yield %>
+  </main>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

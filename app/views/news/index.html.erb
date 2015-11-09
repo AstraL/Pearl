@@ -1,0 +1,11 @@
+<div class="uk-container uk-container-center">
+	<h1>Новости</h1>
+
+	<% @news.each do |n| %>
+		<div class="uk-panel uk-panel-box">
+			<h2><%= n.title %></h2>
+			<h6><%= n.created_at %></h6>
+			<p><%= n.text %></p>
+		</div>
+	<% end %>
+</div>

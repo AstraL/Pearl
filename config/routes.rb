@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :posts, only: [:new, :create, :destroy]
 
   # You can have the root of your site routed with "root"
   root 'static_html#home'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get '/contacts' => 'static_html#contacts', as: :contacts
+  get '/news' => 'news#index', as: :news
+  get '/offers' => 'offers#index', as: :offers
+  get '/blog' => 'blog#index', as: :blog
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

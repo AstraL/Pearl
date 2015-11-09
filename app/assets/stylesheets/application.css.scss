@@ -12,8 +12,15 @@
  *
  *= require_self
  */
- @import "normalize.css";
+ @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
+ @import url(https://fonts.googleapis.com/css?family=Noto+Serif:400italic,700italic&subset=latin,cyrillic);
+ @import url(https://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic);
  @import "main.css";
- @import "uikit.almost-flat.css";
- @import "style.css";
+ @import "font-awesome";
+ @import "uikit.almost-flat.scss";
+ @import "components/sticky.almost-flat.css";
+ @import "animate.css";
+ @import "variables.scss";
+ @import "layouts.scss";
+ @import "static_html.scss";
 

@@ -1,0 +1,11 @@
+<div class="uk-container uk-container-center">
+	<h1>Акции</h1>
+
+	<% @offers.each do |o| %>
+		<div class="uk-panel uk-panel-box">
+			<h2><%= o.title %></h2>
+			<h6><%= o.created_at %></h6>
+			<p><%= o.text %></p>
+		</div>
+	<% end %>
+</div>
