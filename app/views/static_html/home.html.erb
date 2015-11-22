@@ -18,10 +18,12 @@
 <div class="desc">
     <div class="uk-container uk-container-center">
         <div class="uk-grid">
-            <div class="uk-width-1-3 images uk-vertical-align">
+            <div class="images">
                 <%= image_tag "building.jpg", data: {uk_scrollspy: "{cls:'uk-animation-fade', repeat: true}"}, class: 'img-responsive uk-border-circle' %>
+                <%= image_tag "building2.jpg", data: {uk_scrollspy: "{cls:'uk-animation-fade', repeat: true}"}, class: 'img-responsive uk-border-circle' %>
+                <%= image_tag "building3.jpg", data: {uk_scrollspy: "{cls:'uk-animation-fade', repeat: true}"}, class: 'img-responsive uk-border-circle' %>
             </div>
-            <div class="uk-width-1-1 text">
+            <div class="text">
                 <p data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Многие из нас хотя бы раз хотели начать жизнь с чистого листа, кто-то – начиная с <strong>нового</strong> года, кто-то – с понедельника… Чаще всего задуманное не приводится в исполнение или длится недолго, т.к. это достаточно сложный шаг – начать жить <strong>по-новому</strong>. Каждый под этим понимает что-то свое – некоторые имеют в виду глобальные изменения, другие хотят бросить курить, третьи – сменить работу, четвертые – изменить образ жизни и так далее. Как начать жизнь с чистого листа?</p>
                 <p data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Каждый из нас вырастает и живет в определенной системе ценностей и понятий, диктуемой нашим воспитанием и окружением. Сначала мы знакомимся с тем, какой мир вокруг нас и как устроены мы сами. Потом мы живем в уже сложившейся системе координат и со своими представлениями о том, что мы можем. Это рельсы, по которым, безусловно, удобно и так привычно ехать — просты, предсказуемы и безопасны. Чтобы действительно начать менять себя, мало сойти с родной колеи, нужно еще и прокладывать новый путь, выбирая его направление и понимая: это будет уже что-то другое, что-то <strong>новое</strong>, чего нам так хотелось.</p>
                 <p data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Кто бы не хотел начать новую жизнь в <strong>новой</strong> квартире? Ведь это так прекрасно, просыпаясь каждое утро, встречать <strong>новый</strong> день любуясь красотой вида, который открывается из окна. Река Днепр… Такое спокойное могущество… В суете наших дней так важно иметь свой островок безмятежности, чтобы забыть о всех проблемах и заботах… Так прекрасно своими руками создать уголок своей мечты для себя и своих близких.</p>
@@ -36,22 +38,25 @@
     <div class="uk-container uk-container-center">
         <div class="uk-grid">
             <div class="uk-width-1-2">
-                <%= image_tag "gm-placeholder.jpg" %>
+                <div class="map">
+                    <iframe width="100%" height="350px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%81%D1%8B%2C%20%D0%A1%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D1%82%D0%B0%20%D0%B6%D1%83%D0%B6%D0%BE%D0%BC%D0%B8%205%D0%B1&key=AIzaSyBB1FVQ5vDi7l5ZOtdmoFU8LRLrk2kFNME" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="uk-width-1-2">
-                <div class="uk-panel uk-panel-box uk-panel-box-primary">
+                <div class="contact-block">
                     <h3 class="uk-panel-title">Контакты</h3>
-                        <ul>
-                            <li>Телефон:</li>
-                            <li>Email:</li>
-                            <li>Skype:</li>
+                        <ul class="info">
+                            <li>Телефон: <%= link_to '+3 8 (098) 07-111-11', 'skype:+380980711111?call' %></li>
+                            <li>Email: <%= mail_to 'sawyer126@gmail.com' %></li>
+                            <li>Skype: <%= link_to 'Отправить сообщение', 'skype:astral922?chat' %></li>
+                            <li>Адрес: Черкассы, ул. Сержанта Жужомы 5Б</li>
                         </ul>
                         <h3 class="uk-panel-title">Социальные сети</h3>
                         <ul class="social">
-                            <li><%= link_to (fa_icon "vk 2x"), '#!' %></li>
-                            <li><%= link_to (fa_icon "facebook 2x"), '#!' %></li>
-                            <li><%= link_to (fa_icon "google-plus 2x"), '#!' %></li>
-                            <li><%= link_to (fa_icon "instagram 2x"), '#!' %></li>
+                            <li><%= link_to (fa_icon "vk 2x"), '#!', class: 'vk' %></li>
+                            <li><%= link_to (fa_icon "facebook 2x"), '#!', class: 'fb' %></li>
+                            <li><%= link_to (fa_icon "google-plus 2x"), '#!', class: 'google' %></li>
+                            <li><%= link_to (fa_icon "instagram 2x"), '#!', class: 'insta' %></li>
                         </ul>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_action :set_post, only: :show
 
 	def new
 		@post = Post.new
@@ -16,7 +17,14 @@ class PostsController < ApplicationController
 	def destroy
 	end
 
+	def show
+	end
+
 	private
+
+	def set_post
+		@post = Post.find(params[:id])
+	end
 
 	def post_params
     	params.require(:post).permit(:title, :text, :image, :show_count, :kind)

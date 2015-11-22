@@ -39,6 +39,7 @@ group :development do
     gem 'spring'
 end
 
-gem "rails_admin"
 gem "font-awesome-rails"
+
+
 

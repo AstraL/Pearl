@@ -1,34 +1,77 @@
-// Navbar
+// STICKY FOOTER
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: $default-font;
+}
+
+main {
+  flex: 1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $navbar-font;
+}
+
+// NAVBAR-BLUE
+/* .uk-sticky-placeholder {
+	height: 0 !important;
+} */
 .uk-navbar {
 	background-color: $primary-color;
 	border-radius: 0;
 	border: 0;
 	.uk-navbar-brand {
 		font-size: 1.8em;
-		color: $navbar-text-color;
+		color: $link-text-color;
 		text-shadow: 0 0 0;
 		font-weight: 800;
 		display: inline;
 		float: none;
 	}
 	.uk-navbar-nav li a {
-		color: $navbar-text-color;
+		color: $link-text-color;
 		text-shadow: 0 0 0;
 		text-transform: uppercase;
 		font-size: 1.3em;
 		font-weight: bold;
-		font-family: 'Comfortaa', cursive;
+		font-family: $navbar-font;
 		height: 81px;
 		padding-top: 18px;
 		&:hover {
 			background-color: lighten($primary-color, 10%);
-			color: $navbar-text-color;
+			color: $link-text-color;
 		}
 	}
 	.uk-navbar-nav > li:hover > a, .uk-navbar-nav > li > a:focus, .uk-navbar-nav > li.uk-open > a {
 		background-color: lighten($primary-color, 10%);
-		color: $navbar-text-color;
+		color: $link-text-color;
 	}
+	.uk-navbar-content {
+		height: 81px;
+		a {
+			color: $link-text-color;
+			text-shadow: 0 0 0;
+			font-family: $navbar-font;
+			font-size: 2em;
+			vertical-align: middle;
+			&:hover {
+				text-decoration: none;
+				color: $link-text-color;
+			}
+		}
+	}
+}
+
+.heading {
+	h1 {
+		font-size: 8em;
+		transform: rotate(90deg);
+		color: $link-primary-color;
+		text-shadow: #fff 1px 0px, #fff 1px 1px, #fff 0px 1px, #fff -1px 1px, #fff -1px 0px, #fff -1px -1px, #fff 0px -1px, #fff 1px -1px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px;
+	}
+	margin-top: 50%;
 }
 
 // FOOTER
@@ -36,7 +79,7 @@ footer {
 	@extend .uk-block;
 	background-color: $primary-color;
 	div p {
-		color: $navbar-text-color;
+		color: $link-text-color;
 		font-weight: bold;
 		font-size: 1.2em;
 		font-family: 'Comfortaa', cursive;

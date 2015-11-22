@@ -1,11 +1,25 @@
 <div class="uk-container uk-container-center">
-	<h1>Акции</h1>
-
-	<% @offers.each do |o| %>
-		<div class="uk-panel uk-panel-box">
-			<h2><%= o.title %></h2>
-			<h6><%= o.created_at %></h6>
-			<p><%= o.text %></p>
+	<div class="uk-grid">
+		<div class="uk-width-4-5">
+			<% @offers.each do |o| %>
+				<div class="post-box">
+					<div class="post-date">
+						<%= o.created_at.strftime("<span>%e</span><span>%B</span><span>%Y</span>").html_safe %>
+					</div>
+					<div class="title">
+						<h2><%= link_to o.title, o %></h2>
+					</div>
+					<div class="post-info">
+						<%= o.show_count %>
+					</div>
+					<div class="post-text">
+						<p><%= o.text %></p>
+					</div>
+				</div>
+			<% end %>
 		</div>
-	<% end %>
+		<div class="uk-width-1-5">
+			<div class="heading"><h1>Акции</h1></div>
+		</div>
+	</div>
 </div>

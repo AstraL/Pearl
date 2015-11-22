@@ -11,10 +11,11 @@
  * file per style scope.
  *
  *= require_self
+ *= require font-awesome
  */
  @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
- @import url(https://fonts.googleapis.com/css?family=Noto+Serif:400italic,700italic&subset=latin,cyrillic);
  @import url(https://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic);
+ @import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=latin,cyrillic);
  @import "main.css";
  @import "font-awesome";
  @import "uikit.almost-flat.scss";
@@ -23,4 +24,8 @@
  @import "variables.scss";
  @import "layouts.scss";
  @import "static_html.scss";
+ @import "posts.scss";
+ @import "news.scss";
+ @import "blog.scss";
+ @import "offers.scss";
 
