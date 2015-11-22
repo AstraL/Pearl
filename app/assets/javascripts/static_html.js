@@ -14,3 +14,5 @@ $("#letter-container h2 a").lettering();
 
 // HEADING ANIMATION
 $(".heading").addClass("animated fadeInDownBig");
+
+

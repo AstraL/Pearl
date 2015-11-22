@@ -429,3 +429,43 @@
    	text-shadow: 0px 0px 2px #fff, 1px 1px 4px rgba(0,0,0,0.7);
  }
 }
+
+// CONTACTS
+.contacts-container {
+	@extend .uk-container, .uk-container-center;
+	padding: 20px 0;
+	.contact-block {
+		@extend .uk-panel, .uk-panel-box, .uk-panel-box-primary;
+		ul, img {
+			display: inline-block;
+		}
+		img {
+			height: 100%;
+			width: auto;
+			margin: -10px 0 0 0;
+			@extend .uk-border-rounded;
+		}
+		ul {
+			list-style-type: none;
+			padding: 10px 0 0 10px;
+			margin: 0;
+			li {
+				font-size: 1.2em;
+				margin: 0 0 5px 0;
+				i {
+					margin: 0 5px 0 0;
+				}
+				a {
+					text-decoration: none;
+				}
+			}
+			li.name {
+				font-weight: 700;
+				font-size: 1.6em;
+			}
+			li.email, li.phone, li.skype {
+				margin: 10px 0;
+			}
+		}
+	}
+}

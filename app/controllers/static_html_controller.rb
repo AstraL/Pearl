@@ -4,5 +4,6 @@ class StaticHtmlController < ApplicationController
 	end
 
 	def contacts
+		@feedback = Feedback.new
 	end
 end

@@ -1,3 +1,77 @@
-<div class="contacts-map-big">
-	<iframe width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1 place?q=%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%81%D1%8B%2C%20%D0%A1%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D1%82%D0%B0%20%D0%96%D1%83%D0%B6%D0%BE%D0%BC%D0%B8%205&key=AIzaSyBB1FVQ5vDi7l5ZOtdmoFU8LRLrk2kFNME" allowfullscreen></iframe>
+<div id="map">
+	<iframe height="450" width="100%" frameborder="0" style="border:0"
+	src="https://www.google.com/maps/embed/v1/place?q=place_id:EnfQstGD0LvQuNGG0Y8g0KHQtdGA0LbQsNC90YLQsCDQltGD0LbQvtC80LgsIDUsINCn0LXRgNC60LDRgdC4LCDQp9C10YDQutCw0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0ZfQvdCwLCAxODAwMA&key=AIzaSyBsj9CkNTGH2ythh1N-G5Whz9L7VyCU5UM" allowfullscreen></iframe>
+</div>
+<div class="contacts-container">
+	<div class="uk-grid uk-grid-divider">
+		<div class="uk-width-1-2">
+			<div class="contact-block">
+				<img src="http://placehold.it/170x250" alt="">
+				<ul>
+					<li class="name">Имя Фамилия</li>
+					<li class="position">Менеджер</li>
+					<li class="email"><%= fa_icon "envelope-o" %><%= mail_to 'sawyer126@gmail.com' %></li>
+					<li class="phone"><%= fa_icon "phone" %><%= link_to '+3 8 (098) 07-111-11', 'skype:+380980711111?call' %></li>
+					<li class="skype"><%= fa_icon "skype" %><%= link_to 'Отправить сообщение', 'skype:astral922?chat' %></li>
+				</ul>
+			</div>
+			<div class="contact-block">
+				<img src="http://placehold.it/170x250" alt="">
+				<ul>
+					<li class="name">Имя Фамилия</li>
+					<li class="position">Менеджер</li>
+					<li class="email"><%= fa_icon "envelope-o" %><%= mail_to 'sawyer126@gmail.com' %></li>
+					<li class="phone"><%= fa_icon "phone" %><%= link_to '+3 8 (098) 07-111-11', 'skype:+380980711111?call' %></li>
+					<li class="skype"><%= fa_icon "skype" %><%= link_to 'Отправить сообщение', 'skype:astral922?chat' %></li>
+				</ul>
+			</div>
+			<div class="contact-block">
+				<img src="http://placehold.it/170x250" alt="">
+				<ul>
+					<li class="name">Имя Фамилия</li>
+					<li class="position">Менеджер</li>
+					<li class="email"><%= fa_icon "envelope-o" %><%= mail_to 'sawyer126@gmail.com' %></li>
+					<li class="phone"><%= fa_icon "phone" %><%= link_to '+3 8 (098) 07-111-11', 'skype:+380980711111?call' %></li>
+					<li class="skype"><%= fa_icon "skype" %><%= link_to 'Отправить сообщение', 'skype:astral922?chat' %></li>
+				</ul>
+			</div>
+		</div>
+		<div class="uk-width-1-2">
+			<div class="feedback">
+				<h2>Форма обратной связи</h2>
+				<%= form_for @feedback, url: {controller: "feedbacks", action: "create"}, html: {class: 'feedback-form'} do |f| %>
+					<% if @feedback.errors.any? %>
+					    <div id="error_explanation">
+					      <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+					      <ul>
+					      <% @feedback.errors.full_messages.each do |msg| %>
+					        <li><%= msg %></li>
+					      <% end %>
+					      </ul>
+					    </div>
+					<% end %>
+					<div class="uk-form-row">
+						<%= f.label :name, "Имя", class: 'uk-form-label' %>
+						<%= f.text_field :name %>
+					</div>
+					<div class="uk-form-row">
+						<%= f.label :email, "E-mail", class: 'uk-form-label' %>
+						<%= f.email_field :email %>
+					</div>
+					<div class="uk-form-row">
+						<%= f.label :phone, "Телефон", class: 'uk-form-label' %>
+						<%= f.text_field :phone %>
+					</div>
+					<div class="uk-form-row">
+						<%= f.label :message, "Сообщение", class: 'uk-form-label' %>
+						<%= f.text_area :message %>
+					</div>
+					<div class="actions">
+						<%= f.submit "Отправить" %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </div>
