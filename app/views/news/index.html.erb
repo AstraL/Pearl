@@ -12,6 +12,9 @@
 					<div class="post-info">
 						<%= n.show_count %>
 					</div>
+					<% unless n.image.blank? %>
+            			<%= image_tag n.image %>
+            		<% end %>
 					<div class="post-text">
 						<p><%= n.text %></p>
 					</div>

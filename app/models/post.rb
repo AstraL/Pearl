@@ -15,4 +15,6 @@
 class Post < ActiveRecord::Base
 
 	TYPE = ["news", "offers", "blog"]
+
+	mount_uploader :image, PostUploader
 end

@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["Новая Мытница", "Админ-панель"]
   ### Popular gems integration
 
   ## == Devise ==
