@@ -12,11 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
-//= require plugins
 //= require jquery.lettering
-//= require uikit
-//= require components/sticky
-//= require components/parallax
 //= require fancybox
 //= require static_html

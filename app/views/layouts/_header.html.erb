@@ -1,21 +1,19 @@
-<header>
-    <nav data-uk-sticky class="uk-navbar">
-        <div class="uk-container uk-container-center">
-            <ul class="uk-navbar-nav">
-                <%= content_tag(:li, link_to('Новости', news_path)) %>
-                <%= content_tag(:li, link_to('Акции', offers_path)) %>
-                <li><a href="">Фото</a></li>
-            </ul>
-            <div class="uk-navbar-flip">
-                <ul class="uk-navbar-nav">
-                    <%= content_tag(:li, link_to('Квартиры', houses_path)) %>
-                    <%= content_tag(:li, link_to('Контакты', contacts_path)) %>
-                    <%= content_tag(:li, link_to('Блог', blog_path)) %>
-                </ul>
-            </div>
-            <div class="uk-navbar-content uk-navbar-center">
-                <%= link_to 'ЖК "Новая Мытница"', root_path %>
-            </div>
-        </div>
-    </nav>
-</header>
+<nav class="navbar navbar-primary navbar-fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse">
+			<div class="navbar-header">
+				<%= link_to 'ЖК "Жемчужина Днепра"', root_path, class: 'navbar-brand' %>
+			</div>
+			<ul class="nav navbar-nav">
+				<%= content_tag(:li, link_to('Новости', news_path), class: 'active') %>
+				<%= content_tag(:li, link_to('Акции', offers_path)) %>
+				<li><a href="">Фото</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<%= content_tag(:li, link_to('Квартиры', houses_path)) %>
+				<%= content_tag(:li, link_to('Контакты', contacts_path)) %>
+				<%= content_tag(:li, link_to('Блог', blog_path)) %>
+			</ul>
+		</div>
+	</div>
+</nav>

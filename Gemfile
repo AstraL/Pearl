@@ -14,6 +14,8 @@ gem "rails_admin"
 gem "carrierwave"
 gem "rmagick"
 gem 'fancybox-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'normalize-rails'
 
 group :development do
 	gem 'annotate'
