@@ -43,6 +43,7 @@ gem "font-awesome-rails"
 gem "rails_admin"
 gem "carrierwave"
 gem "rmagick"
+gem 'fancybox-rails'
 
 
 

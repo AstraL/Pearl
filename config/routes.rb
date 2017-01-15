@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   resources :posts, only: [:new, :create, :destroy, :show]
   resources :feedbacks, only: :create
+  resources :houses
+  resources :apartaments
 
   # You can have the root of your site routed with "root"
   root 'static_html#home'

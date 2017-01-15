@@ -18,4 +18,5 @@
 //= require uikit
 //= require components/sticky
 //= require components/parallax
+//= require fancybox
 //= require static_html

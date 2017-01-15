@@ -1,0 +1,33 @@
+<div class="uk-container uk-container-center">
+	<div class="uk-grid">
+		<div class="uk-width-1-1">
+			<div class="house-info">
+				<%= image_tag @house.image.thumb %>
+				<ul>
+					<li><span><%= @house.title %></span></li>
+					<li>Адрес: <span><%= @house.address %></span></li>
+					<li>Количество этажей: <span>10</span></li>
+					<li>Количество подъездов: <span>3</span></li>
+				</ul>
+			</div>
+			<div class="apartaments-info">
+				<ul class="uk-tab uk-tab-grid" data-uk-tab data-uk-switcher="{connect:'#ap'}">
+				    <li class="uk-width-1-3"><a href="">1 комната</a></li>
+				    <li class="uk-width-1-3"><a href="">2 комнаты</a></li>
+				    <li class="uk-width-1-3"><a href="">3 комнаты</a></li>
+				</ul>
+				<ul id="ap" class="uk-switcher">
+					<li>
+						<% @one_room.each do |ap| %>
+							<div class="ap">
+								<%= link_to (image_tag ap.image.thumb), ap %>
+							</div>
+						<% end %>
+					</li>
+					<li>bladfd</li>
+					<li>blaala</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

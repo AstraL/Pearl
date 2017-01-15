@@ -1,0 +1,10 @@
+// Place all the styles related to the Apartaments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.apartament {
+	margin: 35px 0 0 0;
+	.apartament-image {
+		@extend .uk-panel, .uk-panel-box;
+		width: 25%;
+	}
+}

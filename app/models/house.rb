@@ -1,20 +1,18 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: houses
 #
 #  id         :integer          not null, primary key
 #  title      :string
-#  text       :text
+#  address    :string
 #  image      :string
-#  show_count :integer
-#  kind       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Post < ActiveRecord::Base
+class House < ActiveRecord::Base
 
-	TYPE = ["news", "offers", "blog"]
+	has_many :apartaments
 
-	mount_uploader :image, PostUploader
+	mount_uploader :image, HouseUploader
 end

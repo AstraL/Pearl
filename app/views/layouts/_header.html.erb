@@ -8,7 +8,7 @@
             </ul>
             <div class="uk-navbar-flip">
                 <ul class="uk-navbar-nav">
-                    <li><a href="">Квартиры</a></li>
+                    <%= content_tag(:li, link_to('Квартиры', houses_path)) %>
                     <%= content_tag(:li, link_to('Контакты', contacts_path)) %>
                     <%= content_tag(:li, link_to('Блог', blog_path)) %>
                 </ul>

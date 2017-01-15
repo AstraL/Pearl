@@ -1,0 +1,44 @@
+// Place all the styles related to the Houses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.houses, .apartaments {
+	background-image: url("house-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.house-box {
+	@extend .uk-panel, .uk-panel-box;
+	display: inline-block;
+	text-align: center;
+	margin: 0 20px;
+	img {
+		@extend .uk-border-rounded;
+	}
+}
+
+.house-info {
+	@extend .uk-panel, .uk-panel-box;
+	margin: 15px 0;
+	img, ul {
+		display: inline-block;
+	}
+	ul {
+		list-style-type: none;
+		li {
+			margin: 0 0 20px 0;
+			font-size: 1.5em;
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.apartaments-info {
+	@extend .uk-panel, .uk-panel-box;
+	.ap {
+		@extend .uk-panel, .uk-panel-box, .uk-panel-box-primary;
+		display: inline-block;
+	}
+}

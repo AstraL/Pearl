@@ -1,0 +1,13 @@
+<div class="uk-container uk-container-center">
+	<div class="uk-grid">
+		<div class="uk-width-1-1">
+			<% @houses.each do |house| %>
+			<div class="house-box">
+				<%= image_tag house.image.thumb %>
+				<h3><%= link_to house.title, house %></h3>
+				<p><%= house.address %></p>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
