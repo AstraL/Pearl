@@ -9,7 +9,7 @@
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
 	</head>
-	<body class="index-page">
+	<body class="index-page <%= yield :class %>">
 	  <%= render 'layouts/header'%>
 	  <%= render 'layouts/notice'%>
 	  <main class="wrapper">

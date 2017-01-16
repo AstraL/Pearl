@@ -1,12 +1,13 @@
+
 <div id="map">
 	<iframe height="450" width="100%" frameborder="0" style="border:0"
 	src="https://www.google.com/maps/embed/v1/place?q=place_id:EnfQstGD0LvQuNGG0Y8g0KHQtdGA0LbQsNC90YLQsCDQltGD0LbQvtC80LgsIDUsINCn0LXRgNC60LDRgdC4LCDQp9C10YDQutCw0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0ZfQvdCwLCAxODAwMA&key=AIzaSyDLd-0WOjN9owG7Myzl4UKRZk5sUlVzRcE" allowfullscreen></iframe>
 </div>
 <div class="contacts-container">
-	<div class="uk-grid uk-grid-divider">
-		<div class="uk-width-1-2">
+	<div class="row">
+		<div class="col-md-6">
 			<div class="contact-block">
-				<img src="http://placehold.it/170x250" alt="">
+				<img src="http://placehold.it/170x250" alt="" class="contact-foto">
 				<ul>
 					<li class="name">Имя Фамилия</li>
 					<li class="position">Менеджер</li>
@@ -16,7 +17,7 @@
 				</ul>
 			</div>
 			<div class="contact-block">
-				<img src="http://placehold.it/170x250" alt="">
+				<img src="http://placehold.it/170x250" alt="" class="contact-foto">
 				<ul>
 					<li class="name">Имя Фамилия</li>
 					<li class="position">Менеджер</li>
@@ -26,7 +27,7 @@
 				</ul>
 			</div>
 			<div class="contact-block">
-				<img src="http://placehold.it/170x250" alt="">
+				<img src="http://placehold.it/170x250" alt="" class="contact-foto">
 				<ul>
 					<li class="name">Имя Фамилия</li>
 					<li class="position">Менеджер</li>
@@ -36,39 +37,41 @@
 				</ul>
 			</div>
 		</div>
-		<div class="uk-width-1-2">
+		<div class="col-md-6">
 			<div class="feedback">
 				<h2>Форма обратной связи</h2>
 				<%= form_for @feedback, url: {controller: "feedbacks", action: "create"}, html: {class: 'feedback-form'} do |f| %>
-					<% if @feedback.errors.any? %>
-					    <div id="error_explanation">
-					      <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this post from being saved:</h2>
+					<div class="content">
+						<% if @feedback.errors.any? %>
+							<div id="error_explanation">
+								<h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-					      <ul>
-					      <% @feedback.errors.full_messages.each do |msg| %>
-					        <li><%= msg %></li>
-					      <% end %>
-					      </ul>
-					    </div>
-					<% end %>
-					<div class="uk-form-row">
-						<%= f.label :name, "Имя", class: 'uk-form-label' %>
-						<%= f.text_field :name %>
-					</div>
-					<div class="uk-form-row">
-						<%= f.label :email, "E-mail", class: 'uk-form-label' %>
-						<%= f.email_field :email %>
-					</div>
-					<div class="uk-form-row">
-						<%= f.label :phone, "Телефон", class: 'uk-form-label' %>
-						<%= f.text_field :phone %>
-					</div>
-					<div class="uk-form-row">
-						<%= f.label :message, "Сообщение", class: 'uk-form-label' %>
-						<%= f.text_area :message %>
-					</div>
-					<div class="actions">
-						<%= f.submit "Отправить" %>
+								<ul>
+									<% @feedback.errors.full_messages.each do |msg| %>
+										<li><%= msg %></li>
+									<% end %>
+								</ul>
+							</div>
+						<% end %>
+						<div class="form-group label-floating">
+							<%= f.label :name, "Имя", class: 'control-label' %>
+							<%= f.text_field :name, class: 'form-control' %>
+						</div>
+						<div class="form-group label-floating">
+							<%= f.label :email, "E-mail", class: 'control-label' %>
+							<%= f.email_field :email, class: 'form-control' %>
+						</div>
+						<div class="form-group label-floating">
+							<%= f.label :phone, "Телефон", class: 'control-label' %>
+							<%= f.text_field :phone, class: 'form-control' %>
+						</div>
+						<div class="form-group label-floating">
+							<%= f.label :message, "Сообщение", class: 'control-label' %>
+							<%= f.text_area :message, rows: 6, class: 'form-control' %>
+						</div>
+						<div class="actions">
+							<%= f.submit "Отправить", class: 'btn btn-success btn-lg btn-round btn-block' %>
+						</div>
 					</div>
 				<% end %>
 			</div>

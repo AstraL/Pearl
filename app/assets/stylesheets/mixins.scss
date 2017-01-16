@@ -1,0 +1,54 @@
+@mixin img-link() {
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	img {
+		@extend .img-responsive;
+		border: 2px solid $brand-purple;
+		border-radius: 50%;
+	}
+	.overlay {
+		background-color: rgba($brand-purple, .6);
+		border-radius: 50%;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		transform: scale(0);
+		transition: transform .4s ease-in-out;
+		i {
+			color: #fff;
+			font-size: 7em;
+			margin: 35% 0;
+		}
+	}
+	&:hover {
+		.overlay {
+			transform: scale(1);
+		}
+	}
+}
+
+@mixin margin-top() {
+	margin-top: 75px;
+}
+
+@mixin text-shadow() {
+	text-shadow: #fff 1px 0px, #fff 1px 1px, #fff 0px 1px, #fff -1px 1px, #fff -1px 0px, #fff -1px -1px, #fff 0px -1px, #fff 1px -1px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px;
+}
+
+@mixin text-shadow-yellow() {
+	text-shadow: $brand-yellow 1px 0px, $brand-yellow 1px 1px, $brand-yellow 0px 1px, $brand-yellow -1px 1px, $brand-yellow -1px 0px, $brand-yellow -1px -1px, $brand-yellow 0px -1px, $brand-yellow 1px -1px, $brand-yellow 0 0 3px, $brand-yellow 0 0 3px, $brand-yellow 0 0 3px, $brand-yellow 0 0 3px, $brand-yellow 0 0 3px, $brand-yellow 0 0 3px, $brand-yellow 0 0 3px, $brand-yellow 0 0 3px;
+}
+
+@mixin primary-panel() {
+	@extend .card;
+	background-color: lighten($brand-purple, 55%);
+	padding: 15px;
+	transition: background-color .3s linear;
+	&:hover {
+		background-color: #eeeeee;
+	}
+}

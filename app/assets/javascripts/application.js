@@ -15,5 +15,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require jquery.lettering
+//= require material.min
+//= require material-kit
 //= require fancybox
 //= require static_html

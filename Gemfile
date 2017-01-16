@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 gem "font-awesome-rails"
+gem 'rails_admin_material_theme', '~> 0.2.0'
 gem "rails_admin"
 gem "carrierwave"
 gem "rmagick"
