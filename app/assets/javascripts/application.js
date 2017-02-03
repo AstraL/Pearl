@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require jquery.lettering
 //= require material.min
 //= require material-kit
 //= require fancybox
+//= require maps
 //= require static_html

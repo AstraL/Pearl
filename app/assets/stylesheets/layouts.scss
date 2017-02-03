@@ -9,19 +9,18 @@ body {
 }
 
 main {
-  flex: 1;
+    flex: 1;
+	position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $navbar-font;
-	color: $brand-purple;
 }
 
 .heading {
 	h1 {
 		font-size: 8em;
 		transform: rotate(90deg);
-		color: $brand-purple;
 		text-shadow: #fff 1px 0px, #fff 1px 1px, #fff 0px 1px, #fff -1px 1px, #fff -1px 0px, #fff -1px -1px, #fff 0px -1px, #fff 1px -1px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px, #fff 0 0 3px;
 	}
 	margin-top: 50%;
@@ -31,9 +30,6 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
 	border-radius: 0;
 	font-family: $navbar-font;
-	&.navbar-primary {
-		background-color: $brand-purple;
-	}
 	.navbar-header {
 		float: none;
 		display: inline-block;
@@ -53,13 +49,34 @@ h1, h2, h3, h4, h5, h6 {
 // FOOTER
 footer {
 	background-color: $brand-purple;
-	margin-top: 35px;
-	div p {
-		color: $link-text-color;
-		font-weight: bold;
-		font-size: 1.4em;
-		font-family: 'Comfortaa', cursive;
-		margin: 20px 0;
+	text-align: center;
+	color: #fff;
+	&.footer-big {
+		h5 {
+			color: $brand-yellow;
+		}
 	}
+	.content {
+		text-align: left;
+	}
+	.links-vertical li {
+		display: block;
+		margin-left: -5px;
+		margin-right: -5px;
+
+		a {
+			color: #fff;
+			padding: 5px;
+		}
+	}
+	.pull-center {
+		display: inline-block;
+		float: none;
+	}
+}
+
+// Helpers
+.content-primary {
+	//background: linear-gradient(60deg, #ab47bc, #7b1fa2);
 }
 

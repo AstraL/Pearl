@@ -1,9 +1,22 @@
-<footer>
+<footer class="footer footer-big">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<p>ЖК "Жемчужина Днепра" <%= Time.now.strftime("%Y") %></p>
+		<div class="content">
+			<div class="row">
+				<div class="col-md-2">
+					<h5>Меню</h5>
+					<ul class="links-vertical">
+						<%= content_tag(:li, link_to('Квартиры', houses_path)) %>
+						<%= content_tag(:li, link_to('Контакты', contacts_path)) %>
+						<%= content_tag(:li, link_to('Блог', blog_path)) %>
+						<%= content_tag(:li, link_to('Новости', news_path)) %>
+						<%= content_tag(:li, link_to('Акции', offers_path)) %>
+					</ul>
+				</div>
 			</div>
+		</div>
+		<hr>
+		<div class="copyright pull-center">
+			<span>ЖК "Жемчужина Днепра" <%= Time.now.strftime("%Y") %></span>
 		</div>
 	</div>
 </footer>
