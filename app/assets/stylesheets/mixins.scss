@@ -52,3 +52,36 @@
 		background-color: #eeeeee;
 	}
 }
+
+//------------------ PRO COMPONENTS ----------------------//
+@mixin social-line() {
+	padding: 15px 0;
+}
+
+@mixin social-line-big-icons() {
+	[class*="col-"] {
+		border-right: 1px solid #eeeeee;
+		&:last-child {
+			border: 0;
+		}
+	}
+	.btn {
+		margin: 0;
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		will-change: color;
+		transition: color .3s ease-in-out;
+		.fa {
+			font-size: 25px;
+		}
+	}
+}
+
+@mixin social-line-black() {
+	background: radial-gradient(ellipse at center, #585858 0%, #232323 100%);
+	background-size: 550% 450%;
+	[class*="col-"] {
+		border-color: rgba(#fff, 0.1);
+	}
+}

@@ -1,5 +1,6 @@
 ru:
   admin:
+    js: 'ru'
     actions:
       bulk_delete:
         breadcrumb: "Удаление"

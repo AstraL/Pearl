@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $navbar-font;
 }
 
+a {
+	transition: color .3s ease-in-out;
+}
+
 .heading {
 	h1 {
 		font-size: 8em;
@@ -43,6 +47,28 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: 16px;
 		padding-top: 17px;
 		padding-bottom: 17px;
+	}
+}
+
+// SOCIAL CALLOUT
+.social-line {
+	@include social-line();
+	@include social-line-big-icons();
+	@include social-line-black();
+	#vk-link:hover {
+		color: $vkontakte-color;
+	}
+	#fb-link:hover {
+		color: $facebook-color;
+	}
+	#tw-link:hover {
+		color: $twitter-color;
+	}
+	#google-link:hover {
+		color: $google-color;
+	}
+	#insta-link:hover {
+		color: $instagram-color;
 	}
 }
 
