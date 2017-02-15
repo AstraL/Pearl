@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   root 'static_html#home'
 
   # Example of regular route:
+  get '/about' => 'static_html#about', as: :about
   get '/contacts' => 'static_html#contacts', as: :contacts
   get '/news' => 'news#index', as: :news
   get '/offers' => 'offers#index', as: :offers

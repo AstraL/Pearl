@@ -104,35 +104,52 @@ function initMap() {
     ];
 
     var infoContent = '<div id="info-window" class="card">' +
-                        '<div class="content content-primary">' +
-                            '<h4 class="card-title">Отдел продаж</h4>' +
-                            '<p class="card-description">Пн - Пт: 9:00 - 18:00<br>Сб: 11:00 - 15:00</p>' +
-                        '</div>'+
-                    '</div>';
+        '<div class="content content-primary">' +
+        '<h4 class="card-title">Отдел продаж</h4>' +
+        '<p class="card-description">Пн - Пт: 9:00 - 18:00<br>Сб: 11:00 - 15:00</p>' +
+        '</div>'+
+        '</div>';
 
-    var mapBig = new google.maps.Map(document.getElementById('map'), {
-        center: myLatLng,
-        zoom: 16,
-        scrollwheel: false,
-        styles: purpleStyle
-    });
+    var map;
+    var marker;
 
-    var infoWindow = new google.maps.InfoWindow({
-        content: infoContent
-    });
+    if($("#transport-map").length > 0) {
+        map = new google.maps.Map(document.getElementById("transport-map"), {
+            center: myLatLng,
+            zoom: 14,
+            scrollwheel: false
+        });
 
-    var marker = new google.maps.Marker({
-        map: mapBig,
-        position: myLatLng,
-        title: 'Отдел продаж',
-        animation: google.maps.Animation.DROP
-    });
-    marker.addListener('click', function() {
-        infoWindow.open(mapBig, marker);
-        mapBig.panTo(myLatLng);
-    });
-    infoWindow.addListener('domready', function() {
-        var iwOuter = $('.gm-style-iw');
-        var infoWrap = iwOuter.parent();
-    });
+        marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            animation: google.maps.Animation.DROP
+        });
+
+        marker.addListener('click', function() {
+            map.panTo(myLatLng);
+        });
+    } else if($("#map").length > 0) {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: myLatLng,
+            zoom: 16,
+            scrollwheel: false,
+            styles: purpleStyle
+        });
+
+        var infoWindow = new google.maps.InfoWindow({
+            content: infoContent
+        });
+
+        marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            title: 'Отдел продаж',
+            animation: google.maps.Animation.DROP
+        });
+        marker.addListener('click', function() {
+            infoWindow.open(map, marker);
+            map.panTo(myLatLng);
+        });
+    }
 }

@@ -17,7 +17,7 @@
 	<div class="header header-primary text-center">
 		<h4 class="card-title">Форма обратной связи</h4>
 	</div>
-	<%= form_for @feedback, url: {controller: "feedbacks", action: "create"} do |f| %>
+	<%= form_for @feedback, url: {controller: "feedbacks", action: "create"}, remote: true do |f| %>
 		<div class="content">
 			<div class="row">
 				<% if @feedback.errors.any? %>

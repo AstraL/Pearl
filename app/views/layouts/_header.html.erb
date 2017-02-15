@@ -4,15 +4,11 @@
 			<div class="navbar-header">
 				<%= link_to 'ЖК "Жемчужина Днепра"', root_path, class: 'navbar-brand' %>
 			</div>
-			<ul class="nav navbar-nav">
-				<%= content_tag(:li, link_to('Новости', news_path), class: 'active') %>
-				<%= content_tag(:li, link_to('Акции', offers_path)) %>
-				<li><a href="">Фото</a></li>
-			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<%= content_tag(:li, link_to('Квартиры', houses_path)) %>
-				<%= content_tag(:li, link_to('Контакты', contacts_path)) %>
+				<%= content_tag(:li, link_to('Новости', news_path), class: 'active') %>
+				<%= content_tag(:li, link_to('Проект', about_path)) %>
 				<%= content_tag(:li, link_to('Блог', blog_path)) %>
+				<%= content_tag(:li, link_to('Контакты', contacts_path)) %>
 			</ul>
 		</div>
 	</div>

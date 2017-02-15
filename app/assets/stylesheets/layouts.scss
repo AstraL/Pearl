@@ -5,12 +5,14 @@
 
 body {
 	background-color: #f5f5f5;
-    font-family: $default-font;
 }
 
 main {
     flex: 1;
 	position: relative;
+	.main-raised {
+		margin: -60px 30px -20px;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,16 +32,22 @@ a {
 	margin-top: 50%;
 }
 
+.page-header {
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 //NAVBAR
 .navbar {
 	border-radius: 0;
 	font-family: $navbar-font;
 	.navbar-header {
-		float: none;
 		display: inline-block;
-		margin: 0 10%;
 		.navbar-brand {
-			color: $brand-yellow;
 			font-size: 22px;
 		}
 	}

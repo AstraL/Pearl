@@ -53,9 +53,9 @@ $(document).ready(function(){
     }
 
     // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
-    if($('.navbar-color-on-scroll').length != 0){
+    /*if($('.navbar-color-on-scroll').length != 0){
         $(window).on('scroll', materialKit.checkScrollForTransparentNavbar)
-    }
+    }*/
 
     // Activate Popovers
     $('[data-toggle="popover"]').popover();
@@ -76,12 +76,12 @@ materialKit = {
             if($(document).scrollTop() > 260 ) {
                 if(transparent) {
                     transparent = false;
-                    $('.navbar-color-on-scroll').removeClass('navbar-transparent');
+                    $('.navbar').removeClass('navbar-transparent');
                 }
             } else {
                 if( !transparent ) {
                     transparent = true;
-                    $('.navbar-color-on-scroll').addClass('navbar-transparent');
+                    $('.navbar').addClass('navbar-transparent');
                 }
             }
     }, 17),
@@ -125,7 +125,7 @@ materialKitDemo = {
 
     }, 6)
 
-}
+};
 // Returns a function, that, as long as it continues to be invoked, will not
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
