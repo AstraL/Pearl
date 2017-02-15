@@ -87,6 +87,9 @@
 			text-align: justify;
 		}
 	}
+	.header-filter:after {
+		background: rgba(0, 0, 0, 0.2);
+	}
 	.carousel-control {
 		width: 5%;
 	}
@@ -121,6 +124,9 @@
 	}
 	#transport-map {
 		height: 75vh;
+	}
+	.info {
+		text-align: center;
 	}
 }
 
