@@ -19,6 +19,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'normalize-rails'
 gem 'devise'
 gem 'rubocop'
+gem 'puma'
 
 group :development do
 	gem 'annotate'
@@ -26,6 +27,11 @@ group :development do
     gem 'byebug'
     gem 'web-console', '~> 2.0'
     gem 'spring'
+	gem 'capistrano',         require: false
+	gem 'capistrano-rvm',     require: false
+	gem 'capistrano-rails',   require: false
+	gem 'capistrano-bundler', require: false
+	gem 'capistrano3-puma',   require: false
 end
 
 
