@@ -10,7 +10,7 @@
 #  updated_at :datetime         not null
 #
 
-class House < ActiveRecord::Base
+class House < ApplicationRecord
 
 	has_many :apartaments
 

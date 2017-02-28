@@ -12,7 +12,7 @@
 #  updated_at :datetime         not null
 #
 
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
 
 	TYPE = ["news", "offers", "blog"]
 

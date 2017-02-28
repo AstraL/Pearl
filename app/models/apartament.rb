@@ -16,7 +16,7 @@
 #  house_id      :integer
 #
 
-class Apartament < ActiveRecord::Base
+class Apartament < ApplicationRecord
 
 	belongs_to :house
 
