@@ -113,22 +113,14 @@ function initMap() {
     var map;
     var marker;
 
+
+
+
     if($("#transport-map").length > 0) {
-        map = new google.maps.Map(document.getElementById("transport-map"), {
-            center: myLatLng,
-            zoom: 14,
-            scrollwheel: false
-        });
+        transportMap(map, myLatLng);
 
-        marker = new google.maps.Marker({
-            map: map,
-            position: myLatLng,
-            animation: google.maps.Animation.DROP
-        });
 
-        marker.addListener('click', function() {
-            map.panTo(myLatLng);
-        });
+
     } else if($("#map").length > 0) {
         map = new google.maps.Map(document.getElementById("map"), {
             center: myLatLng,
@@ -153,3 +145,112 @@ function initMap() {
         });
     }
 }
+
+function transportMap(map, center) {
+    var directionsService = new google.maps.DirectionsService;
+
+    var points = [
+        {
+            name: 'Вокзал',
+            position: {lat: 49.426159, lng: 32.0409623},
+            icon: 'train.png'
+        },
+        {
+            name: 'ТРЦ "Любава"',
+            position: {lat: 49.4450192, lng: 32.0541519},
+            icon: 'mall.png'
+        }, {
+            name: 'ТРЦ "Дніпро-Плаза"',
+            position: {lat: 49.4345542, lng: 32.088969},
+            icon: 'mall.png'
+        }
+    ];
+
+    map = new google.maps.Map(document.getElementById("transport-map"), {
+        center: center,
+        zoom: 14,
+        scrollwheel: false
+    });
+
+    marker = new google.maps.Marker({
+        map: map,
+        position: center,
+        animation: google.maps.Animation.DROP
+    });
+
+    marker.addListener('click', function () {
+        map.panTo(center);
+    });
+
+    var directionsOptions = {
+        preserveViewport: true,
+        suppressMarkers: true,
+        suppressInfoWindows: true
+    };
+    for (i = 0; i < points.length; i++) {
+
+        var point = points[i];
+        var pointMarker = new google.maps.Marker({
+            map: map,
+            position: point.position,
+            animation: google.maps.Animation.DROP,
+            icon: 'assets/markers/' + point.icon,
+            title: point.name
+        });
+        directionsService.route({
+            origin: marker.position,
+            destination: pointMarker.position,
+            travelMode: google.maps.TravelMode.DRIVING,
+            drivingOptions: {
+                departureTime: new Date(),
+                trafficModel: google.maps.TrafficModel.PESSIMISTIC
+            }
+        }, function (response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
+                var directionsRenderer = new google.maps.DirectionsRenderer({ map: map });
+                var routeInfo = new google.maps.InfoWindow();
+
+                directionsRenderer.setOptions(directionsOptions);
+                directionsRenderer.setDirections(response);
+                console.log(directionsRenderer.getDirections());
+/*                pointMarker.routeInfoContent = "<p>" + destinationNames[i] + "</p>" +
+                        "<p>"+ response.routes[0].legs[0].distance.text +"</p>"+
+                        "<p>"+ response.routes[0].legs[0].duration.text +"</p>";
+                routeInfo.setContent(routeName + response.routes[0].legs[0].distance.text + "<br>" + response.routes[0].legs[0].duration.text + " ");
+                routeInfo.setPosition(response.routes[0].legs[0].end_location);
+                routeInfo.open(map);*/
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+    }
+}
+
+function calculateAndDisplayRoute(directionsService, origin, destination, map) {
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    directionsDisplay.setMap(map);
+    directionsDisplay.setOptions({
+        preserveViewport: true,
+        suppressMarkers: true,
+        suppressInfoWindows: true
+    });
+    directionsService.route({
+        origin: origin.position,
+        destination: destination.position,
+        travelMode: google.maps.TravelMode.DRIVING,
+        drivingOptions: {
+            departureTime: new Date(),
+            trafficModel: google.maps.TrafficModel.PESSIMISTIC
+        }
+
+    }, function(response, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+            console.log(response.routes[0].legs[0].distance);
+            console.log(response.routes[0].legs[0].duration);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
+}
+

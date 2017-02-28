@@ -18,6 +18,7 @@ gem 'fancybox-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'normalize-rails'
 gem 'devise'
+gem 'rubocop'
 
 group :development do
 	gem 'annotate'
