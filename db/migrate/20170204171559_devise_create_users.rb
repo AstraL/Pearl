@@ -42,5 +42,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     # add_index :users, :reset_password_token, unique: true
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
+    u = User.create(login: "astral", email: "sawyer126@gmail.com", password: "dh390j239j", password_confirmation: "dh390j239j")
+    u.save
   end
 end
