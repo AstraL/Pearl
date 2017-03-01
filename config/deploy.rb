@@ -63,7 +63,7 @@ namespace :deploy do
 		on roles(:app) do
 			execute "mkdir #{shared_path}/config -p"
 			upload! StringIO.new(File.read("config/database.yml")), "#{shared_path}/config/database.yml"
-			upload! StringIO.new(File.read("config/secret.yml")), "#{shared_path}/config/secret.yml"
+			upload! StringIO.new(File.read("config/secrets.yml")), "#{shared_path}/config/secret.yml"
 		end
 	end
 
