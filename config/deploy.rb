@@ -1,5 +1,5 @@
 # Change these
-server '185.25.119.102', port: 22, roles: [:web, :app, :db], primary: true
+server '138.68.65.83', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@git.bidon-gs.com:web/Pearl.git'
 set :application,     'pearl'
