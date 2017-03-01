@@ -1,7 +1,7 @@
 # Change these
 server '138.68.65.83', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'http://git.bidon-gs.com/web/Pearl.git'
+set :repo_url,        'git@git.bidon-gs.com/web/Pearl.git'
 set :application,     'pearl'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]

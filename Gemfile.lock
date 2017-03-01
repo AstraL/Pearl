@@ -143,6 +143,8 @@ GEM
     orm_adapter (0.5.0)
     parser (2.4.0.0)
       ast (~> 2.2)
+    pg (0.19.0)
+    pg (0.19.0-x64-mingw32)
     powerpack (0.1.1)
     puma (3.7.1)
     rack (2.0.1)
@@ -274,6 +276,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   normalize-rails
+  pg
   puma
   rails (= 5.0.1)
   rails_admin (~> 1.0)
