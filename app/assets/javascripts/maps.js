@@ -3,20 +3,29 @@ function initMap() {
 
     var purpleStyle = [
         {
+            "featureType": "administrative",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#444444"
+                }
+            ]
+        },
+        {
             "featureType": "landscape",
             "elementType": "all",
             "stylers": [
                 {
-                    "hue": "#FF007B"
-                },
+                    "color": "#f2f2f2"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape.man_made",
+            "elementType": "geometry.fill",
+            "stylers": [
                 {
-                    "saturation": 59.80000000000001
-                },
-                {
-                    "lightness": 21
-                },
-                {
-                    "gamma": 1
+                    "color": "#e0e0e0"
                 }
             ]
         },
@@ -25,16 +34,19 @@ function initMap() {
             "elementType": "all",
             "stylers": [
                 {
-                    "hue": "#FF00AF"
+                    "visibility": "on"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "saturation": -100
                 },
                 {
-                    "saturation": 32.599999999999994
-                },
-                {
-                    "lightness": 20.599999999999994
-                },
-                {
-                    "gamma": 1
+                    "lightness": 45
                 }
             ]
         },
@@ -43,46 +55,25 @@ function initMap() {
             "elementType": "all",
             "stylers": [
                 {
-                    "hue": "#FFAF00"
-                },
-                {
-                    "lightness": 50.80000000000001
-                },
-                {
-                    "gamma": 1
+                    "visibility": "simplified"
                 }
             ]
         },
         {
             "featureType": "road.arterial",
-            "elementType": "all",
+            "elementType": "labels.icon",
             "stylers": [
                 {
-                    "hue": "#FFE800"
-                },
-                {
-                    "lightness": 8.600000000000009
-                },
-                {
-                    "gamma": 1
+                    "visibility": "off"
                 }
             ]
         },
         {
-            "featureType": "road.local",
+            "featureType": "transit",
             "elementType": "all",
             "stylers": [
                 {
-                    "hue": "#FFD900"
-                },
-                {
-                    "saturation": 44.79999999999998
-                },
-                {
-                    "lightness": 3.6000000000000085
-                },
-                {
-                    "gamma": 1
+                    "visibility": "off"
                 }
             ]
         },
@@ -91,13 +82,22 @@ function initMap() {
             "elementType": "all",
             "stylers": [
                 {
-                    "hue": "#0078FF"
+                    "color": "#46bcec"
                 },
                 {
-                    "saturation": 24.200000000000003
+                    "visibility": "on"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "visibility": "on"
                 },
                 {
-                    "gamma": 1
+                    "color": "#e2a4e6"
                 }
             ]
         }

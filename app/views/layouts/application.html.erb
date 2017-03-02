@@ -5,12 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ЖК "Перлина Дніпра"</title>
+		<title><%= full_title(yield(:title)) %></title>
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
-
 	</head>
-	<body class="index-page <%= yield :class %>">
+	<body class="<%= yield :class %>">
 	  	<%= render 'layouts/header'%>
 	  	<%= render 'layouts/notice'%>
 	  	<main class="wrapper">

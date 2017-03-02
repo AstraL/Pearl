@@ -5,11 +5,23 @@
 				<div class="col-md-2">
 					<h5>Меню</h5>
 					<ul class="links-vertical">
-						<%= content_tag(:li, link_to('Головна', houses_path)) %>
-						<%= content_tag(:li, link_to('Проект', about_path)) %>
-						<%= content_tag(:li, link_to('Квартири', houses_path)) %>
+						<%= content_tag(:li) do %>
+                            <%= fa_icon 'chevron-right' %>
+                            <%= link_to('Головна', houses_path) %>
+                        <% end %>
+						<%= content_tag(:li) do %>
+                            <%= fa_icon 'chevron-right' %>
+                            <%= link_to('Проект', about_path) %>
+                        <% end %>
+						<%= content_tag(:li) do %>
+                            <%= fa_icon 'chevron-right' %>
+                            <%= link_to('Квартири', houses_path) %>
+                        <% end %>
 						<%#= content_tag(:li, link_to('Блог', blog_path)) %>
-						<%= content_tag(:li, link_to('Контакти', contacts_path)) %>
+						<%= content_tag(:li) do %>
+                            <%= fa_icon 'chevron-right' %>
+                            <%= link_to('Контакти', contacts_path) %>
+                        <% end %>
 					</ul>
 				</div>
 				<div class="col-md-5 col-md-offset-3">

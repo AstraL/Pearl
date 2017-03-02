@@ -19,3 +19,4 @@
 //= require fancybox
 //= require maps
 //= require static_html
+//= require houses
