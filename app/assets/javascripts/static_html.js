@@ -15,12 +15,12 @@ function navbar() {
     }
 }
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     navbar();
 });
 
 $(document).addEventListener('turbolinks:load', function() {
     navbar();
-});
+});*/
 
 
