@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // HOME PAGE
 #intro {
-	background-image: url("intro-bg-fireworks.jpg");
+	background-image: asset-url("intro-bg.jpg");
 	.container {
 		padding-top: 30vh;
 	}
@@ -17,7 +17,7 @@
 		line-height: 1.5;
 		padding: 20px;
 		text-align: justify;
-		font-family: 'Bad Script', cursive;
+		font-family: 'Neucha', cursive;
 		font-size: 1.5em;
 		color: $text;
 		p {

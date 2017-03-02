@@ -105,7 +105,7 @@ function initMap() {
 
     var infoContent = '<div id="info-window" class="card">' +
         '<div class="content content-primary">' +
-        '<h4 class="card-title">Отдел продаж</h4>' +
+        '<h4 class="card-title">Відділ продажу</h4>' +
         '<p class="card-description">Пн - Пт: 9:00 - 18:00<br>Сб: 11:00 - 15:00</p>' +
         '</div>'+
         '</div>';
@@ -136,7 +136,7 @@ function initMap() {
         marker = new google.maps.Marker({
             map: map,
             position: myLatLng,
-            title: 'Отдел продаж',
+            title: 'Відділ продажу',
             animation: google.maps.Animation.DROP
         });
         marker.addListener('click', function() {

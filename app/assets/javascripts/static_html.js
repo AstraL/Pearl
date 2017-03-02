@@ -19,7 +19,7 @@ $(document).ready(function() {
     navbar();
 });
 
-$(document).on('page:load', function() {
+$(document).addEventListener('turbolinks:load', function() {
     navbar();
 });
 
