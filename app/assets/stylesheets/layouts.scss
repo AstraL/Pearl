@@ -53,6 +53,11 @@ a {
     }
 	.navbar-header {
 		display: inline-block;
+		.logo-mini {
+			float: left;
+			height: 45px;
+			margin-right: 20px;
+		}
 		.navbar-brand {
 			font-size: 22px;
 		}

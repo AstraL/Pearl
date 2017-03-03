@@ -254,3 +254,49 @@ function calculateAndDisplayRoute(directionsService, origin, destination, map) {
     });
 }
 
+function mapPort() {
+    var pearlPosition = {lat: 49.4361835, lng: 32.1003415};
+    var portPosition = {lat: 49.4354895, lng: 32.1019026};
+    var map;
+    var pearlMarker;
+    var portMarker;
+    var infoWindow = new google.maps.InfoWindow();
+
+    map = new google.maps.Map(document.getElementById("map-port"), {
+        center: pearlPosition,
+        zoom: 16,
+        scrollwheel: false
+    });
+    var places = new google.maps.places.PlacesService(map);
+    var portID = 'ChIJMWMU1BFL0UAR8KK5o1MVcuk';
+    pearlMarker = new google.maps.Marker({
+        map: map,
+        position: pearlPosition
+    });
+
+    places.getDetails({
+        placeId: portID
+    }, function(place, status) {
+        if(status === google.maps.places.PlacesServiceStatus.OK) {
+            console.log(place);
+            portMarker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+            });
+            var content = "<div class='map-place'>" +
+                "<h6>"+ place.name +"</h6>" +
+                "<span>" + place.address_components[1].long_name + ", "+ place.address_components[0].long_name +"</span>" +
+                    "<hr>" +
+                "<img src="+ place.photos[0].getUrl({maxHeight: 170}) +" alt="+ place.name +" class='img-responsive'>" +
+                "</div>";
+            google.maps.event.addListener(portMarker, 'click', function() {
+                infoWindow.setContent(content);
+                infoWindow.open(map, this);
+            });
+        }
+    })
+
+
+
+}
+

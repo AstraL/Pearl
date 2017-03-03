@@ -15,12 +15,18 @@ function navbar() {
     }
 }
 
-/*$(document).ready(function() {
-    navbar();
+// Map instead of port foto
+var image = $('#port-photo').html();
+$('#map-trigger').on('click', function() {
+    var container = $('#map-port');
+    var height = container.height();
+    if(container.attr('data-content') === "image") {
+        container.css('height', height).attr('data-content', 'map');
+        mapPort();
+    } else {
+        container.html('');
+        container.html(image).attr('data-content', 'image');
+    }
 });
-
-$(document).addEventListener('turbolinks:load', function() {
-    navbar();
-});*/
 
 

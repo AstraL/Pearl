@@ -9,33 +9,71 @@
 	}
 }
 
-.description {
-	.image {
-		margin-top: 45px;
-	}
-	.text {
-		line-height: 1.5;
-		padding: 20px;
-		text-align: justify;
-		font-family: 'Neucha', cursive;
-		font-size: 1.5em;
-		color: $text;
-		p {
-			font-size: 1.1em;
-			text-indent: 1.5em;
-			strong {
-				color: $brand-purple;
+.home-page {
+	.description {
+		.row {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 45px;
 			}
 		}
-		p.ps {
-			text-align: right;
-			font-weight: bold;
+		hr {
+			border-color: $brand-purple;
+			border-width: 2px;
+			margin: 40px 0;
+		}
+		.title, .address {
+			color: $brand-purple;
+			text-align: center;
+		}
+		.title {
+			line-height: 3em;
+		}
+		.text {
+			&:last-child {
+				padding-top: 40px;
+			}
+			p {
+				font-size: 1.5em;
+				color: $text;
+				margin: 0;
+				line-height: 2;
+				text-align: justify;
+			}
+			span {
+				color: $brand-info;
+				cursor: pointer;
+				-webkit-text-decoration-line: underline;
+				-webkit-text-decoration-style: dashed;
+			}
+		}
+		.statistic {
+			margin-bottom: 20px;
+			.title {
+				line-height: 2em;
+			}
+			.counter {
+				color: $text;
+				text-align: center;
+				.number {
+					border-bottom: 5px solid $brand-purple;
+					display: block;
+					font-size: 5em;
+					font-weight: bold;
+					line-height: 1.5em;
+				}
+				p {
+					font-size: 1.3em;
+					line-height: 2.5em;
+				}
+			}
 		}
 	}
 }
 
 .features {
-	background-image: asset-url("features-bg.jpg");
+	background-image: asset-url("intro-bg-fireworks.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -72,6 +110,19 @@
 		p {
 			color: $white-text;
 		}
+	}
+}
+
+.map-place {
+	h6 {
+		font-family: 'Roboto', sans-serif;
+		color: $text;
+		margin: 0;
+		font-weight: bold;
+	}
+	hr {
+		border-width: 1px !important;
+		margin: 2px 0 !important;
 	}
 }
 
