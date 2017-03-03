@@ -10,13 +10,14 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body class="<%= yield :class %>">
-	  	<%= render 'layouts/header'%>
-	  	<%= render 'layouts/notice'%>
+        <%= render 'layouts/loader' %>
+	  	<%= render 'layouts/header' %>
+	  	<%= render 'layouts/notice' %>
 	  	<main class="wrapper">
 			<%= yield %>
 	  	</main>
 	  	<%= render 'layouts/social' %>
-	  	<%= render 'layouts/footer'%>
+	  	<%= render 'layouts/footer' %>
 	  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	</body>
 </html>

@@ -29,4 +29,29 @@ $('#map-trigger').on('click', function() {
     }
 });
 
+var loader = $('#loader');
+
+$(document).ready(function() {
+    loaderHide(loader);
+});
+
+document.addEventListener('turbolinks:request-start', function() {
+    loaderCall(loader);
+});
+
+document.addEventListener('turbolinks:load', function() {
+    loaderHide(loader);
+});
+
+
+function loaderCall(loader) {
+    loader.fadeIn(500).attr('data-status', 'display');
+}
+
+function loaderHide(loader) {
+    setTimeout(function() {
+        loader.fadeOut(800).attr('data-status', 'hidden');
+    }, 800);
+}
+
 
