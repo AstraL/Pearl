@@ -1,6 +1,7 @@
  @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
  @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic);
  @import url('https://fonts.googleapis.com/css?family=Neucha');
+ @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:800');
  @import "normalize-rails";
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -13,4 +14,6 @@
  @import "layouts";
  @import "static_html";
  @import "houses";
+
+ @import "responsive";
 

@@ -1,114 +1,9 @@
 function initMap() {
     var myLatLng = {lat: 49.43697, lng: 32.10042};
 
-    var purpleStyle = [
-        {
-            "featureType": "administrative",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#444444"
-                }
-            ]
-        },
-        {
-            "featureType": "landscape",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "color": "#f2f2f2"
-                }
-            ]
-        },
-        {
-            "featureType": "landscape.man_made",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "color": "#e0e0e0"
-                }
-            ]
-        },
-        {
-            "featureType": "poi",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "visibility": "on"
-                }
-            ]
-        },
-        {
-            "featureType": "road",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "saturation": -100
-                },
-                {
-                    "lightness": 45
-                }
-            ]
-        },
-        {
-            "featureType": "road.highway",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "visibility": "simplified"
-                }
-            ]
-        },
-        {
-            "featureType": "road.arterial",
-            "elementType": "labels.icon",
-            "stylers": [
-                {
-                    "visibility": "off"
-                }
-            ]
-        },
-        {
-            "featureType": "transit",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "visibility": "off"
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "color": "#46bcec"
-                },
-                {
-                    "visibility": "on"
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "color": "#e2a4e6"
-                }
-            ]
-        }
-    ];
 
-    var infoContent = '<div id="info-window" class="card">' +
-        '<div class="content content-primary">' +
-        '<h4 class="card-title">Відділ продажу</h4>' +
-        '<p class="card-description">Пн - Пт: 9:00 - 18:00<br>Сб: 11:00 - 15:00</p>' +
-        '</div>'+
-        '</div>';
+
+
 
     var map;
     var marker;
@@ -122,28 +17,157 @@ function initMap() {
 
 
     } else if($("#map").length > 0) {
-        map = new google.maps.Map(document.getElementById("map"), {
-            center: myLatLng,
-            zoom: 16,
-            scrollwheel: false,
-            styles: purpleStyle
-        });
 
-        var infoWindow = new google.maps.InfoWindow({
-            content: infoContent
-        });
-
-        marker = new google.maps.Marker({
-            map: map,
-            position: myLatLng,
-            title: 'Відділ продажу',
-            animation: google.maps.Animation.DROP
-        });
-        marker.addListener('click', function() {
-            infoWindow.open(map, marker);
-            map.panTo(myLatLng);
-        });
     }
+}
+var salesCoords = {lat: 49.43697, lng: 32.10042};
+var purpleStyle = [
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#444444"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#e0e0e0"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 45
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#46bcec"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#e2a4e6"
+            }
+        ]
+    }
+];
+
+function contactsMap() {
+    var map;
+    var marker;
+    var investCoords = {lat: 50.4188081, lng: 30.4878974};
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: salesCoords,
+        zoom: 16,
+        scrollwheel: false,
+        styles: purpleStyle
+    });
+
+    var infoContent = '<div id="info-window" class="card">' +
+        '<div class="content content-primary">' +
+        '<h4 class="card-title">Відділ продажу</h4>' +
+        '<p class="card-description">Пн - Пт: 9:00 - 18:00<br>Сб: 11:00 - 15:00</p>' +
+        '</div>'+
+        '</div>';
+
+    var infoWindow = new google.maps.InfoWindow({
+        content: infoContent
+    });
+
+    marker = new google.maps.Marker({
+        map: map,
+        position: salesCoords,
+        title: 'Відділ продажу',
+        animation: google.maps.Animation.DROP
+    });
+
+    var investMark = new google.maps.Marker({
+        map: map,
+        position: investCoords
+    });
+    marker.addListener('click', function() {
+        infoWindow.open(map, marker);
+        map.panTo(salesCoords);
+    });
+
+    $('#sales-trigger').click(function() {
+        map.panTo(salesCoords);
+    });
+
+    $('#invest-trigger').click(function(){
+        map.panTo(investCoords);
+    });
 }
 
 function transportMap(map, center) {
@@ -226,34 +250,7 @@ function transportMap(map, center) {
     }
 }
 
-function calculateAndDisplayRoute(directionsService, origin, destination, map) {
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-    directionsDisplay.setMap(map);
-    directionsDisplay.setOptions({
-        preserveViewport: true,
-        suppressMarkers: true,
-        suppressInfoWindows: true
-    });
-    directionsService.route({
-        origin: origin.position,
-        destination: destination.position,
-        travelMode: google.maps.TravelMode.DRIVING,
-        drivingOptions: {
-            departureTime: new Date(),
-            trafficModel: google.maps.TrafficModel.PESSIMISTIC
-        }
-
-    }, function(response, status) {
-        if (status === google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-            console.log(response.routes[0].legs[0].distance);
-            console.log(response.routes[0].legs[0].duration);
-        } else {
-            window.alert('Directions request failed due to ' + status);
-        }
-    });
-}
-
+// Map on home page
 function mapPort() {
     var pearlPosition = {lat: 49.4361835, lng: 32.1003415};
     var portPosition = {lat: 49.4354895, lng: 32.1019026};
@@ -294,9 +291,6 @@ function mapPort() {
                 infoWindow.open(map, this);
             });
         }
-    })
-
-
-
+    });
 }
 

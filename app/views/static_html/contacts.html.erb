@@ -1,9 +1,10 @@
 <% content_for :title, 'Контакти' %>
+<% content_for :maps, gmaps_call('contactsMap') %>
 <div id="map">
 </div>
 <div id="our-contacts" class="card card-raised card-nav-tabs">
 	<div class="header header-info text-center">
-		<h4 class="card-title">Наші Контакти</h4>
+		<h4 id="sales-trigger" class="card-title">Наші Контакти</h4>
 	</div>
 	<div class="content content-danger">
 		<ul class="contact-info">
@@ -15,6 +16,18 @@
 			<li class="address"><%= fa_icon "map-marker" %>Черкаси, вул. Козацька 1/1</li>
 		</ul>
 	</div>
+</div>
+<div id="invest-contacts" class="card card-raised card-nav-tabs">
+    <div class="header header-success text-center">
+        <h4 id="invest-trigger" class="card-title">Інвестори</h4>
+    </div>
+    <div class="content">
+        <ul class="contact-info">
+            <li class="phone"><%= fa_icon "phone" %><%= tel_to '+38 (044) 569-23-10' %></li>
+            <li class="email"><%= fa_icon "envelope-o" %><%= mail_to 'info@kya.kiev.ua', 'info@kya.kiev.ua' %></li>
+            <li class="address"><%= fa_icon "map-marker" %>Київ, вул. Клінічна 23-25</li>
+        </ul>
+    </div>
 </div>
 <div id="feedback-form" class="card card-raised card-nav-tabs">
 	<div class="header header-primary text-center">
