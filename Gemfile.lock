@@ -96,8 +96,6 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
-    fancybox-rails (0.3.1)
-      railties (>= 3.1.0)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
     globalid (0.3.7)
@@ -119,6 +117,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     libv8 (3.16.14.17)
+    lightbox2-rails (2.8.2.1)
+      railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -271,10 +271,10 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
-  fancybox-rails
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  lightbox2-rails
   normalize-rails
   pg
   puma

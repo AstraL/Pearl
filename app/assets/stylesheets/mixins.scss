@@ -85,3 +85,10 @@
 		border-color: rgba(#fff, 0.1);
 	}
 }
+
+@mixin social-line-info() {
+	background: linear-gradient(180deg, $bright-purple 5%, $brand-purple 95%);
+	[class*="col-"] {
+		border-color: rgba(#fff, 0.3);
+	}
+}

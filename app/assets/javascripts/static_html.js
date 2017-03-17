@@ -28,7 +28,6 @@ $('#map-trigger').on('click', function() {
         container.html(image).attr('data-content', 'image');
     }
 });
-
 var loader = $('#loader');
 
 $(document).ready(function() {

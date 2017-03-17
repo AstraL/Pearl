@@ -1,5 +1,6 @@
 <% content_for :class, 'index-page about-page' %>
-<section id="about-carousel" class="carousel slide" data-ride="carousel">
+<% content_for :maps, gmaps_call('transportMap') %>
+<!--<section id="about-carousel" class="carousel slide" data-ride="carousel">
 	<ol class="carousel-indicators">
 		<li data-target="#about-carousel" data-slide-to="0" class="active"></li>
 		<li data-target="#about-carousel" data-slide-to="1"></li>
@@ -7,15 +8,6 @@
 		<li data-target="#about-carousel" data-slide-to="3"></li>
 	</ol>
 	<div class="carousel-inner" role="listbox">
-		<div id="about-us" class="card card-raised card-nav-tabs">
-			<div class="header header-primary text-center">
-				<h4 class="card-title">Про нас</h4>
-			</div>
-			<div class="content">
-				<p>Житловий комплекс з вбудовано-прибудованими приміщеннями громадського призначення «ПЕРЛИНА ДНІПРА» розміститься на земельній ділянці площею 11 200,0 кв. м, що знаходиться в районі Старої Митниці на перетині вулиць Козацька та Припортова навпроти Річкового вокзалу.</p>
-				<p>Таке розташування забезпечує майбутнім мешканцям житлового комплексу мальовничі види з вікон квартир на річку Дніпро, прогулянки вздовж набережної, а також дає можливість користуватися всіма зручностями вже наявної навколо комплексу розвиненої інфраструктури.</p>
-			</div>
-		</div>
 		<div class="item active">
 			<div class="page-header header-filter" style="background-image: url(<%= asset_url("pearl-photos/1.jpg") %>);">
 			</div>
@@ -42,6 +34,9 @@
 		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 		<span class="sr-only">Next</span>
 	</a>
+</section>-->
+<section class="about-panorama">
+
 </section>
 <section id="conception">
 	<div class="main main-raised">

@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // HOME PAGE
 #intro {
-	background-image: asset-url("intro-bg.jpg");
+	height: 100vh;
 	.container {
 		padding-top: 30vh;
 	}
@@ -13,7 +13,10 @@
     background-image: asset_url("geometry-bg.jpg");
     background-size: cover;
     background-attachment: fixed;
-	.description {
+	.main {
+		padding: 40px;
+	}
+	.general {
 		.row {
 			margin-top: 15px;
 			margin-bottom: 15px;
@@ -22,23 +25,33 @@
 			}
 		}
 		hr {
-			border-color: $brand-purple;
+			border-color: $divider-color;
 			border-width: 2px;
 			margin: 40px 0;
 		}
 		.title, .address {
-			color: $brand-purple;
 			text-align: center;
 		}
 		.title {
-			line-height: 3em;
+			line-height: 2em;
+			font-weight: 700;
+		}
+		h1.title {
+			font-size: 3em;
+		}
+		h2.title {
+			font-size: 2.5em;
+		}
+		.address {
+			font-size: 2em;
+			line-height: 4em;
 		}
 		.text {
 			&:last-child {
 				padding-top: 40px;
 			}
 			p {
-				font-size: 1.5em;
+				font-size: 1.3em;
 				color: $text;
 				margin: 0;
 				line-height: 2;
@@ -47,8 +60,6 @@
 			span {
 				color: $brand-info;
 				cursor: pointer;
-				-webkit-text-decoration-line: underline;
-				-webkit-text-decoration-style: dashed;
 			}
 		}
 		.statistic {
@@ -57,18 +68,17 @@
 				line-height: 2em;
 			}
 			.counter {
-				color: $text;
 				text-align: center;
 				.number {
-					border-bottom: 5px solid $brand-purple;
-                    font-family: 'Montserrat Alternates', sans-serif;
+					border-bottom: 1px solid $bright-purple;
+					color: $bright-purple;
 					display: block;
-					font-size: 5em;
-					font-weight: bold;
+					font-size: 4.5em;
+					font-weight: 800;
 					line-height: 1.5em;
 				}
 				p {
-					font-size: 1.3em;
+					font-size: 1.2em;
 					line-height: 2.5em;
 				}
 			}
@@ -77,14 +87,7 @@
 }
 
 .features {
-/*	background-image: asset-url("intro-bg-fireworks.jpg");
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;*/
 	padding: 80px 0;
-	&.header-filter:after {
-		background: rgba(0, 0, 0, 0.65);
-	}
 	.container {
 		[class*="col-"] {
 			border: 1px solid rgba(255, 255, 255, 0.35);
@@ -102,16 +105,19 @@
 			}
 		}
 	}
-	h2 {
+	h1 {
 		color: $white-text;
 		margin-bottom: 30px;
+		font-weight: 700;
 	}
 	.info {
 		text-align: center;
 		.info-title {
+			font-size: 1.8em;
 			color: $white-text;
 		}
 		p {
+			font-size: 0.9em;
 			color: $white-text;
 		}
 	}
@@ -131,6 +137,13 @@
 }
 
 // ABOUT
+.about-panorama {
+	margin-top: 75px;
+	background-image: asset-url("dnepr-panorama.jpg");
+	background-size: cover;
+	background-position: bottom;
+	height: 35vh;
+}
 #about-carousel, #conception-carousel {
 	#about-us {
 		position: absolute;
@@ -197,6 +210,7 @@
     width: 25%;
 	.card-title {
 		color: $brand-yellow;
+		cursor: pointer;
 	}
 	.contact-info {
 		list-style-type: none;
@@ -223,14 +237,14 @@
 }
 
 #invest-contacts {
-    left: 5%;
-    top: 60%;
+    right: 5%;
+    top: 15%;
 }
 
 #feedback-form {
 	position: absolute;
 	right: 5%;
-	top: 5%;
+	top: 15%;
 	width: 30%;
 	.card-title {
 		color: $brand-yellow;

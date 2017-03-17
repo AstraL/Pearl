@@ -1,25 +1,3 @@
-function initMap() {
-    var myLatLng = {lat: 49.43697, lng: 32.10042};
-
-
-
-
-
-    var map;
-    var marker;
-
-
-
-
-    if($("#transport-map").length > 0) {
-        transportMap(map, myLatLng);
-
-
-
-    } else if($("#map").length > 0) {
-
-    }
-}
 var salesCoords = {lat: 49.43697, lng: 32.10042};
 var purpleStyle = [
     {
@@ -54,7 +32,7 @@ var purpleStyle = [
         "elementType": "all",
         "stylers": [
             {
-                "visibility": "on"
+                "visibility": "off"
             }
         ]
     },
@@ -131,7 +109,9 @@ function contactsMap() {
         center: salesCoords,
         zoom: 16,
         scrollwheel: false,
-        styles: purpleStyle
+        styles: purpleStyle,
+        mapTypeControl: false,
+        streetViewControl: false
     });
 
     var infoContent = '<div id="info-window" class="card">' +
@@ -149,12 +129,14 @@ function contactsMap() {
         map: map,
         position: salesCoords,
         title: 'Відділ продажу',
-        animation: google.maps.Animation.DROP
+        animation: google.maps.Animation.DROP,
+        icon: 'assets/markers/pearl.png'
     });
 
     var investMark = new google.maps.Marker({
         map: map,
-        position: investCoords
+        position: investCoords,
+        icon: '/assets/markers/kya.png'
     });
     marker.addListener('click', function() {
         infoWindow.open(map, marker);
@@ -169,14 +151,25 @@ function contactsMap() {
         map.panTo(investCoords);
     });
 }
+function getPlace(map, point, callback) {
+    var service = new google.maps.places.PlacesService(map);
+    service.getDetails({
+        placeId: point.place_id
+    }, function(place, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            place.icon_custom = point.icon;
+            callback(place);
+        }
+    });
+}
 
-function transportMap(map, center) {
-    var directionsService = new google.maps.DirectionsService;
-
+function transportMap() {
+    var map;
+    var pearl;
     var points = [
         {
             name: 'Вокзал',
-            position: {lat: 49.426159, lng: 32.0409623},
+            position: {lat: 49.4259493, lng: 32.0498818},
             icon: 'train.png'
         },
         {
@@ -187,68 +180,96 @@ function transportMap(map, center) {
             name: 'ТРЦ "Дніпро-Плаза"',
             position: {lat: 49.4345542, lng: 32.088969},
             icon: 'mall.png'
+        },
+        {
+            name:"ТРЦ DEPO't center",
+            position: {lat: 49.4245774, lng: 32.0928937},
+            icon: 'mall.png'
+        },
+        {
+            name: 'SportLife',
+            position: {lat: 49.437559, lng: 32.1004251},
+            icon: 'fitness.png'
+        },
+        {
+            name: 'Спорт Клуб «Матрикс»',
+            position: {lat: 49.4362322, lng: 32.0888457},
+            icon: 'fitness.png'
         }
     ];
 
     map = new google.maps.Map(document.getElementById("transport-map"), {
-        center: center,
+        center: points[5].position,
         zoom: 14,
+        mapTypeControl: false,
         scrollwheel: false
     });
 
-    marker = new google.maps.Marker({
+    pearl = new google.maps.Marker({
         map: map,
-        position: center,
-        animation: google.maps.Animation.DROP
+        position: salesCoords,
+        animation: google.maps.Animation.DROP,
+        icon: 'assets/markers/pearl.png',
+        zIndex: 1
     });
-
-    marker.addListener('click', function () {
-        map.panTo(center);
-    });
-
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
     var directionsOptions = {
         preserveViewport: true,
         suppressMarkers: true,
         suppressInfoWindows: true
     };
-    for (i = 0; i < points.length; i++) {
 
-        var point = points[i];
-        var pointMarker = new google.maps.Marker({
-            map: map,
-            position: point.position,
-            animation: google.maps.Animation.DROP,
-            icon: 'assets/markers/' + point.icon,
-            title: point.name
-        });
-        directionsService.route({
-            origin: marker.position,
-            destination: pointMarker.position,
-            travelMode: google.maps.TravelMode.DRIVING,
-            drivingOptions: {
-                departureTime: new Date(),
-                trafficModel: google.maps.TrafficModel.PESSIMISTIC
-            }
-        }, function (response, status) {
-            if (status === google.maps.DirectionsStatus.OK) {
-                var directionsRenderer = new google.maps.DirectionsRenderer({ map: map });
-                var routeInfo = new google.maps.InfoWindow();
+    var places = [{
+        name: 'Вокзал',
+        place_id: 'ChIJPTL_RIRL0UARVn0rzvfuYCE',
+        icon: 'train.png'
+    },{
+        name: 'Любава',
+        place_id: 'ChIJzWjwN4JM0UARMcjgasbav4I',
+        icon: 'mall.png'
+    }];
+    var infoWindow = new google.maps.InfoWindow();
+    for (i = 0; i < places.length; i++) {
+        var point = places[i];
 
-                directionsRenderer.setOptions(directionsOptions);
-                directionsRenderer.setDirections(response);
-                console.log(directionsRenderer.getDirections());
-/*                pointMarker.routeInfoContent = "<p>" + destinationNames[i] + "</p>" +
-                        "<p>"+ response.routes[0].legs[0].distance.text +"</p>"+
-                        "<p>"+ response.routes[0].legs[0].duration.text +"</p>";
-                routeInfo.setContent(routeName + response.routes[0].legs[0].distance.text + "<br>" + response.routes[0].legs[0].duration.text + " ");
-                routeInfo.setPosition(response.routes[0].legs[0].end_location);
-                routeInfo.open(map);*/
-            } else {
-                window.alert('Directions request failed due to ' + status);
-            }
+        getPlace(map, point, function(place){
+
+            var pointMarker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: 'assets/markers/' + place.icon_custom,
+                zIndex: 10
+            });
+            var placeInfo = "<p><strong>"+ place.name +"</strong>";
+            pointMarker.addListener('click', function() {
+                infoWindow.close();
+                infoWindow.setContent(placeInfo);
+                infoWindow.open(map, pointMarker);
+                calculateAndDisplayRoute(map, directionsDisplay, directionsService, pearl, pointMarker, directionsOptions);
+            });
         });
     }
 }
+
+function calculateAndDisplayRoute(map, directionsDisplay, directionsService, origin, destination, options) {
+
+    directionsDisplay.setMap(map);
+    directionsDisplay.setOptions(options);
+    directionsService.route({
+        origin: origin.position,
+        destination: destination.position,
+        travelMode: google.maps.TravelMode.DRIVING
+    }, function(response, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
+}
+
 
 // Map on home page
 function mapPort() {
@@ -258,6 +279,7 @@ function mapPort() {
     var pearlMarker;
     var portMarker;
     var infoWindow = new google.maps.InfoWindow();
+    var panorama;
 
     map = new google.maps.Map(document.getElementById("map-port"), {
         center: pearlPosition,
@@ -292,5 +314,14 @@ function mapPort() {
             });
         }
     });
+    panorama = map.getStreetView();
+
+    panorama.setPosition(portPosition);
+    panorama.setPov({
+        heading: 220,
+        pitch:10
+    });
+    panorama.setVisible(true);
+
 }
 

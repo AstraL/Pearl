@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require material.min
 //= require material-kit
-//= require fancybox
+//= require lightbox
 //= require maps
 //= require static_html
 //= require houses

@@ -1,6 +1,6 @@
 <% content_for :title, 'Головна' %>
 <% content_for :class, 'index-page home-page navbar-color-on-scroll' %>
-<div id="intro" class="header header-filter">
+<div id="intro" class="header">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -9,62 +9,64 @@
         </div>
     </div>
 </div>
-<div class="main main-raised">
-	<section class="description container">
-		<h2 class="title">Житловий комплекс "Перлина Дніпра"</h2>
-		<h4 class="address">Черкаси, вул. Козацька 1/1</h4>
-		<div class="row">
-			<div class="text col-md-6">
-				<p>ЖК «Перлина Дніпра» буде складатися з двох однакових житлових будинків з вбудовано-прибудованими торгівельними та офісними приміщеннями. Комплекс буде мати власну сучасну інфраструктуру - проект передбачає використання нежитлових приміщень під офіси, магазини, салони краси, фітнес-центри та інше.</p>
+<div class="container">
+	<div class="main main-raised">
+		<section class="general">
+			<h1 class="title text-primary">Житловий комплекс "Перлина Дніпра"</h1>
+			<h4 class="address">Черкаси, вул. Козацька 1/1</h4>
+			<div class="row">
+				<div class="text col-md-6">
+					<p>ЖК «Перлина Дніпра» буде складатися з двох однакових житлових будинків з вбудовано-прибудованими торгівельними та офісними приміщеннями. Комплекс буде мати власну сучасну інфраструктуру - проект передбачає використання нежитлових приміщень під офіси, магазини, салони краси, фітнес-центри та інше.</p>
+				</div>
+				<div class="col-md-6">
+					<%= link_to (image_tag "description-image-new.jpg", class: 'img-responsive img-raised img-rounded'), image_path("description-image-new.jpg"), data: {lightbox: 'home-page'} %>
+				</div>
 			</div>
-			<div class="col-md-6">
-				<%= link_to (image_tag "description-image.jpg", class: 'img-responsive img-raised img-rounded'), image_path("description-image.jpg") %>
-			</div>
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-md-12 statistic">
-				<h2 class="title">Загальна характеристика</h2>
-				<div class="counter col-sm-3">
+			<hr>
+			<div class="row">
+				<div class="col-md-12 statistic">
+					<h2 class="title">Загальна характеристика</h2>
+					<div class="counter col-sm-3">
 					<span class="number">
 						11 200
 					</span>
-					<p>Площа земельної ділянки (м<sup>2</sup>)</p>
-				</div>
-				<div class="counter col-sm-3">
+						<p>Площа ділянки (м<sup>2</sup>)</p>
+					</div>
+					<div class="counter col-sm-3">
 					<span class="number">
 						6
 					</span>
-					<p>Секцій</p>
-				</div>
-				<div class="counter col-sm-3">
+						<p>Секцій</p>
+					</div>
+					<div class="counter col-sm-3">
 					<span class="number">
 						10
 					</span>
-					<p>Поверхів</p>
-				</div>
-				<div class="counter col-sm-3">
+						<p>Поверхів</p>
+					</div>
+					<div class="counter col-sm-3">
 					<span class="number">
 						216
 					</span>
-					<p>Всього квартир</p>
+						<p>Всього квартир</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<hr>
-		<div class="row">
-			<div id="map-port" data-content="image" class="col-md-6">
-				<%= link_to (image_tag "port.jpg", class: 'img-responsive img-raised img-rounded'), image_path("port.jpg"), id: 'port-photo' %>
+			<hr>
+			<div class="row">
+				<div id="map-port" data-content="image" class="col-md-6">
+					<%= link_to (image_tag "port.jpg", class: 'img-responsive img-raised img-rounded'), image_path("port.jpg"), id: 'port-photo', data: {lightbox: 'home-page'} %>
+				</div>
+				<div class="text col-md-6">
+					<p>Житловий комплекс з вбудовано-прибудованими приміщеннями громадського призначення «Перлина Дніпра» розміститься на земельній ділянці площею 11 200,0 м<sup>2</sup>, що знаходиться в районі Старої Митниці, на перетині вулиць <span id="map-trigger">Козацька та Припортова</span>, навпроти Річкового вокзалу.</p>
+				</div>
 			</div>
-			<div class="text col-md-6">
-				<p>Житловий комплекс з вбудовано-прибудованими приміщеннями громадського призначення «Перлина Дніпра» розміститься на земельній ділянці площею 11 200,0 м<sup>2</sup>, що знаходиться в районі Старої Митниці, на перетині вулиць <span id="map-trigger">Козацька та Припортова</span>, навпроти Річкового вокзалу.</p>
-			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 </div>
-<section id="features" class="features header-filter">
+<section id="features" class="features">
 	<div class="container">
-		<h2 class="text-center">Переваги</h2>
+		<h1 class="text-center">Переваги</h1>
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="info">
@@ -121,6 +123,14 @@
 					<h4 class="info-title">Перевага</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, blanditiis distinctio fugiat, id impedit, laudantium molestiae nihil omnis praesentium quibusdam reiciendis reprehenderit repudiandae voluptatum! Autem est, laboriosam! Blanditiis, consequatur, quia!</p>
 				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<%= link_to 'Дізнатись більше', about_path, class: 'btn btn-primary btn-lg btn-block' %>
 			</div>
 		</div>
 	</div>

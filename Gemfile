@@ -14,12 +14,12 @@ gem 'rails_admin_material_theme', '~> 0.2.0'
 gem 'rails_admin', '~> 1.0'
 gem "carrierwave"
 gem "rmagick"
-gem 'fancybox-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'normalize-rails'
 gem 'devise'
 gem 'rubocop'
 gem 'puma'
+gem 'lightbox2-rails'
 
 group :development do
 	gem 'annotate'
