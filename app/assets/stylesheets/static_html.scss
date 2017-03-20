@@ -51,16 +51,20 @@
 				padding-top: 40px;
 			}
 			p {
-				font-size: 1.3em;
+				font-size: 1.4em;
 				color: $text;
 				margin: 0;
-				line-height: 2;
-				text-align: justify;
+				line-height: 2.5;
+				text-align: center;
+				strong {
+					color: $bright-purple;
+					text-transform: capitalize;
+					font-style: italic;
+				}
 			}
-			span {
-				color: $brand-info;
-				cursor: pointer;
-			}
+		}
+		.home-img-link img {
+			margin: 25px 0;
 		}
 		.statistic {
 			margin-bottom: 20px;
@@ -71,7 +75,6 @@
 				text-align: center;
 				.number {
 					border-bottom: 1px solid $bright-purple;
-					color: $bright-purple;
 					display: block;
 					font-size: 4.5em;
 					font-weight: 800;
@@ -209,7 +212,7 @@
 	position: absolute;
     width: 25%;
 	.card-title {
-		color: $brand-yellow;
+		color: $white-text;
 		cursor: pointer;
 	}
 	.contact-info {
