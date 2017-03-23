@@ -17,6 +17,6 @@
 //= require material.min
 //= require material-kit
 //= require lightbox
-//= require maps
+//= require maps.js.erb
 //= require static_html
 //= require houses

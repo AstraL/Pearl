@@ -130,13 +130,13 @@ function contactsMap() {
         position: salesCoords,
         title: 'Відділ продажу',
         animation: google.maps.Animation.DROP,
-        icon: 'assets/markers/pearl.png'
+        icon: '<%= asset_path('markers/pearl.png') %>'
     });
 
     var investMark = new google.maps.Marker({
         map: map,
         position: investCoords,
-        icon: '/assets/markers/kya.png'
+        icon: '<%= asset_path('markers/kya.png') %>'
     });
     marker.addListener('click', function() {
         infoWindow.open(map, marker);
