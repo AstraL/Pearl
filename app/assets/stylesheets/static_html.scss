@@ -67,23 +67,10 @@
 			margin: 25px 0;
 		}
 		.statistic {
+            @include stat-big-num();
 			margin-bottom: 20px;
 			.title {
 				line-height: 2em;
-			}
-			.counter {
-				text-align: center;
-				.number {
-					border-bottom: 1px solid $bright-purple;
-					display: block;
-					font-size: 4.5em;
-					font-weight: 800;
-					line-height: 1.5em;
-				}
-				p {
-					font-size: 1.2em;
-					line-height: 2.5em;
-				}
 			}
 		}
 	}

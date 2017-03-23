@@ -29,3 +29,34 @@
 		transform: translateY(100%);
 	}
 }
+
+.house-page {
+    background-image: asset-url("geometry-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 75px;
+    .main-raised {
+        margin-top: 0;
+        margin-bottom: 30px;
+        .house-title, .house-address {
+            text-align: center;
+        }
+        .house-title {
+            line-height: 2em;
+        }
+        .stat {
+            @include stat-big-num();
+        }
+        .floor {
+            h2 {
+                text-align: center;
+            }
+        }
+        .apartaments {
+            margin: 20px 0;
+            .card-apartaments {
+                @include card-apartaments();
+            }
+        }
+    }
+}

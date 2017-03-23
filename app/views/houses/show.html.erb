@@ -1,33 +1,98 @@
-<div class="uk-container uk-container-center">
-	<div class="uk-grid">
-		<div class="uk-width-1-1">
-			<div class="house-info">
-				<%= image_tag @house.image.thumb %>
-				<ul>
-					<li><span><%= @house.title %></span></li>
-					<li>Адрес: <span><%= @house.address %></span></li>
-					<li>Количество этажей: <span>10</span></li>
-					<li>Количество подъездов: <span>3</span></li>
-				</ul>
-			</div>
-			<div class="apartaments-info">
-				<ul class="uk-tab uk-tab-grid" data-uk-tab data-uk-switcher="{connect:'#ap'}">
-				    <li class="uk-width-1-3"><a href="">1 комната</a></li>
-				    <li class="uk-width-1-3"><a href="">2 комнаты</a></li>
-				    <li class="uk-width-1-3"><a href="">3 комнаты</a></li>
-				</ul>
-				<ul id="ap" class="uk-switcher">
-					<li>
-						<% @one_room.each do |ap| %>
-							<div class="ap">
-								<%= link_to (image_tag ap.image.thumb), ap %>
-							</div>
-						<% end %>
-					</li>
-					<li>bladfd</li>
-					<li>blaala</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<% content_for :class, 'house-page' %>
+<div class="container">
+    <div class="main main-raised">
+        <%= content_tag :h1, @house.title, class: 'house-title' %>
+        <%= content_tag :h3, @house.address, class: 'house-address' %>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-2 stat">
+                <div class="counter">
+                    <span class="number">
+                        6
+                    </span>
+                    <p>Кількість секцій</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-md-offset-2 stat">
+                <div class="counter">
+                    <span class="number">
+                        10
+                    </span>
+                    <p>Кількість поверхів</p>
+                </div>
+            </div>
+        </div>
+        <div class="row house-image">
+            <div class="col-md-10 col-md-offset-1">
+                <%= image_tag 'conception/conception3.jpg', class: 'img-responsive img-rounded img-raised' %>
+            </div>
+        </div>
+        <div class="row floor default">
+            <h2>Типовий поверх</h2>
+            <div class="col-md-4 col-md-offset-4">
+                <%= link_to (image_tag 'planing/default-floor.jpg', class: 'img-responsive img-rounded img-raised'), image_path('planing/default-floor.jpg'), data: {lightbox: 'house-page'} %>
+            </div>
+        </div>
+        <div class="row apartaments default">
+            <div class="col-sm-4">
+                <div class="card card-apartaments" style="background-image: url(<%= image_path("planing/one-room/37-1r.jpg") %>)">
+                    <div class="content">
+                        <h1 class="card-title">
+                            37,00 m<sup>2</sup>
+                        </h1>
+                        <ul>
+                            <li>Секції: <b>1</b></li>
+                            <li>Поверхи: <b>2-8</b></li>
+                            <li>Кількість кімнат: <b>1</b></li>
+                        </ul>
+                        <%= link_to 'Проглянути', (image_path("planing/one-room/37-1r.jpg")), data: {lightbox: 'planing'}, class: 'btn btn-primary' %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card card-apartaments" style="background-image: url(<%= image_path("planing/one-room/37-1r-mirror.jpg") %>)">
+                    <div class="content">
+                        <h1 class="card-title">
+                            37,00 m<sup>2</sup>
+                        </h1>
+                        <ul>
+                            <li>Секції: <b>1,3</b></li>
+                            <li>Поверхи: <b>2-8</b></li>
+                            <li>Кількість кімнат: <b>1</b></li>
+                        </ul>
+                        <%= link_to 'Проглянути', (image_path("planing/one-room/37-1r-mirror.jpg")), data: {lightbox: 'planing'}, class: 'btn btn-primary' %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card card-apartaments" style="background-image: url(<%= image_path("planing/two-room/56-2r-mirror.jpg") %>)">
+                    <div class="content">
+                        <h1 class="card-title">
+                            56,15 m<sup>2</sup>
+                        </h1>
+                        <ul>
+                            <li>Секції: <b>1,4,5,6</b></li>
+                            <li>Поверхи: <b>2-8</b></li>
+                            <li>Кількість кімнат: <b>2</b></li>
+                        </ul>
+                        <%= link_to 'Проглянути', (image_path("planing/two-room/56-2r-mirror.jpg")), data: {lightbox: 'planing'}, class: 'btn btn-primary' %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card card-apartaments" style="background-image: url(<%= image_path("planing/two-room/57-2r.jpg") %>)">
+                    <div class="content">
+                        <h1 class="card-title">
+                            57,45 m<sup>2</sup>
+                        </h1>
+                        <ul>
+                            <li>Секції: <b>2</b></li>
+                            <li>Поверхи: <b>2-8</b></li>
+                            <li>Кількість кімнат: <b>2</b></li>
+                        </ul>
+                        <%= link_to 'Проглянути', (image_path("planing/two-room/57-2r.jpg")), data: {lightbox: 'planing'}, class: 'btn btn-primary' %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

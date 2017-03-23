@@ -53,4 +53,10 @@ function loaderHide(loader) {
     }, 800);
 }
 
+lightbox.option({
+    fitImagesInViewport: true,
+    disableScrolling: true,
+    positionFromTop: 50
+});
+
 
