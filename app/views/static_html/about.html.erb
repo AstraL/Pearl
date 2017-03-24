@@ -1,133 +1,102 @@
 <% content_for :class, 'index-page about-page' %>
 <% content_for :maps, gmaps_call('transportMap') %>
-<!--<section id="about-carousel" class="carousel slide" data-ride="carousel">
-	<ol class="carousel-indicators">
-		<li data-target="#about-carousel" data-slide-to="0" class="active"></li>
-		<li data-target="#about-carousel" data-slide-to="1"></li>
-		<li data-target="#about-carousel" data-slide-to="2"></li>
-		<li data-target="#about-carousel" data-slide-to="3"></li>
-	</ol>
-	<div class="carousel-inner" role="listbox">
-		<div class="item active">
-			<div class="page-header header-filter" style="background-image: url(<%= asset_url("pearl-photos/1.jpg") %>);">
-			</div>
-		</div>
-		<div class="item">
-			<div class="page-header header-filter" style="background-image: url(<%= asset_url("pearl-photos/2.jpg") %>);">
-			</div>
-		</div>
-		<div class="item">
-			<div class="page-header header-filter" style="background-image: url(<%= asset_url("pearl-photos/3.jpg") %>);">
-			</div>
-		</div>
-		<div class="item">
-			<div class="page-header header-filter" style="background-image: url(<%= asset_url("pearl-photos/4.jpg") %>);">
-			</div>
-		</div>
-	</div>
-
-	<a class="left carousel-control" href="#about-carousel" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="right carousel-control" href="#about-carousel" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
-</section>-->
-<section class="about-panorama">
-
-</section>
+<section class="intro-fireworks header header-filter"></section>
 <section id="conception">
 	<div class="main main-raised">
 		<div class="container">
-			<h1 class="text-primary text-center">Концепція</h1>
+			<h1 class="title">Концепція</h1>
 			<div class="text row">
-				<div class="col-md-10 col-md-offset-1">
-					<p>ЖК «ПЕРЛИНА ДНІПРА» буде складатися з двох однакових житлових будинків з вбудовано-прибудованими торгівельними та офісними приміщеннями.
+				<div class="col-md-12">
+                    <p>ЖК <strong>«Перлина Дніпра»</strong> буде складатися з двох однакових житлових будинків з вбудовано-прибудованими торгівельними та офісними приміщеннями.
 					Комплекс буде мати власну сучасну інфраструктуру - проект передбачає використання нежитлових приміщень під офіси, магазини, салони краси, фітнес-центри та інше.</p>
 				</div>
-				<div class="col-md-10 col-md-offset-1">
-					<h3 class="text-center text-primary">Загальна характеристика кожного з будинків:</h3>
-					<ul>
-						<li>10 поверхів</li>
-						<li>6 секцій (під’їздів)</li>
-						<li>4 квартири на кожному поверсі</li>
-						<li>торгівельні та офісні приміщення на першому (цокольному) поверсі</li>
-						<li>сучасний ліфт в кожній секції</li>
-						<li>стіни з екологічно чистої силікатної цегли, що утеплені мінераловатними плитами з фасадним фарбуванням</li>
-						<li>установка квартирних лічильників електроенергії в коридорах загального користування</li>
-						<li>установка лічильників холодної та гарячої води в санвузлах і ванних кімнатах</li>
-						<li>загально будинковий лічильник системи опалення з установкою в теплопункті будинку</li>
-						<li>установка газових лічильників в кожній квартирі</li>
-						<li>установка металопластикових вікон з зберігаючим п’ятикамерним профілем та двокамерним склопакетом</li>
-					</ul>
-				</div>
+                <div class="col-md-12">
+                    <h3 class="title">Загальна характеристика кожного з будинків:</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-building') %>
+                                </div>
+                                <h6 class="info-title">10 поверхів, 6 секцій, 4 квартири на поверсі</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-3d-buildings') %>
+                                </div>
+                                <h6 class="info-title">Торгівельні та офісні приміщення на першому поверсі</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-elevator') %>
+                                </div>
+                                <h6 class="info-title">Сучасний ліфт</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-brickwall') %>
+                                </div>
+                                <h6 class="info-title">Екологічно чиста силіктна цегла</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-plug') %>
+                                </div>
+                                <h6 class="info-title">Лічильники електроенергії в коридорах загального користування</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-pipes') %>
+                                </div>
+                                <h6 class="info-title">Лічильники води в санвузлах і ванних кімнатах, загально будинковий лічильник системи опалення</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-gas-pipe') %>
+                                </div>
+                                <h6 class="info-title">Газові лічильники у кожній квартирі</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-window') %>
+                                </div>
+                                <h6 class="info-title">Вікна зі зберігаючим п’ятикамерним профілем та двокамерним склопакетом</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			</div>
 		</div>
-	</div>
-	<div id="conception-carousel" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#conception-carousel" data-slide-to="0" class="active"></li>
-			<li data-target="#conception-carousel" data-slide-to="1"></li>
-			<li data-target="#conception-carousel" data-slide-to="2"></li>
-			<li data-target="#conception-carousel" data-slide-to="3"></li>
-			<li data-target="#conception-carousel" data-slide-to="4"></li>
-			<li data-target="#conception-carousel" data-slide-to="5"></li>
-		</ol>
-		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<div class="big-image" style="background-image: url(<%= asset_url("conception/conception1.jpg") %>);">
-
-				</div>
-			</div>
-			<div class="item">
-				<div class="big-image" style="background-image: url(<%= asset_url("conception/conception2.jpg") %>);">
-
-				</div>
-			</div>
-			<div class="item">
-				<div class="big-image" style="background-image: url(<%= asset_url("conception/conception3.jpg") %>);">
-
-				</div>
-			</div>
-			<div class="item">
-				<div class="big-image" style="background-image: url(<%= asset_url("conception/conception4.jpg") %>);">
-
-				</div>
-			</div>
-			<div class="item">
-				<div class="big-image" style="background-image: url(<%= asset_url("conception/conception5.jpg") %>);">
-
-				</div>
-			</div>
-			<div class="item">
-				<div class="big-image" style="background-image: url(<%= asset_url("conception/conception6.jpg") %>);">
-
-				</div>
-			</div>
-		</div>
-
-		<a class="left carousel-control" href="#about-carousel" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#about-carousel" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
 	</div>
 </section>
 <section id="transport">
 	<div class="main main-raised">
 		<div class="container">
-			<h1 class="text-primary text-center">Транспортна доступність</h1>
+			<h1 class="title">Транспортна доступність</h1>
 			<div class="text row">
-				<p>Розташування забезпечує майбутнім мешканцям житлового комплексу мальовничі види з вікон квартир на річку Дніпро, прогулянки вздовж набережної, а також дає можливість користуватися всіма зручностями вже наявної навколо комплексу розвиненої інфраструктури.</p>
-				<h3 class="text-center text-primary">Поруч з житловим комплексом знаходяться:</h3>
+                <div class="col-md-12">
+                    <p>Розташування забезпечує майбутнім мешканцям житлового комплексу мальовничі види з вікон квартир на річку Дніпро, прогулянки вздовж набережної, а також дає можливість користуватися всіма зручностями вже наявної навколо комплексу розвиненої інфраструктури.</p>
+                </div>
 			</div>
+            <h3 class="title">Поруч з житловим комплексом знаходяться:</h3>
 			<div class="row">
-				<div class="col-sm-4">
+                <div class="col-sm-4">
 					<div class="info">
 						<div class="icon">
 							<%= fa_icon "child", class: 'text-primary' %>

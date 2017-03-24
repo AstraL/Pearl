@@ -1,5 +1,5 @@
 <% content_for :title, 'Головна' %>
-<% content_for :class, 'index-page home-page navbar-color-on-scroll' %>
+<% content_for :class, 'index-page' %>
 <div id="intro" class="header">
     <div class="container">
         <div class="row">
@@ -12,8 +12,8 @@
 <div class="main main-raised">
 	<div class="container">
 		<section class="general">
-			<h1 class="title text-primary">Житловий комплекс "Перлина Дніпра"</h1>
-			<h4 class="address">Черкаси, вул. Козацька 1/1</h4>
+			<h1 class="title">Житловий комплекс "Перлина Дніпра"</h1>
+            <%= content_tag(:h3, (fa_icon "map-o", text: 'Черкаси, вул. Козацька 1/1'), class: 'title address') %>
 			<hr>
 			<div class="row">
 				<div class="col-md-12 statistic">
@@ -47,8 +47,8 @@
 			<hr>
 			<div class="row">
 				<div class="text col-md-12">
-					<p>Житловий комплекс з вбудовано-прибудованими приміщеннями громадського призначення <strong>«Перлина Дніпра»</strong> розміститься на земельній ділянці площею 11 200,0 м<sup>2</sup>, що знаходиться в районі Старої Митниці на перетин вулиць Козацька та Припортова навпроти Річкового вокзалу.</p>
-					<p>	Таке розташування забезпечує майбутнім мешканцям житлового комплексу мальовничі види з вікон квартир на річку Дніпро, прогулянки вздовж набережної, а також дає можливість користуватися всіма зручностями вже наявної навколо комплексу розвиненої інфраструктури.</p>
+					<p>Житловий комплекс з вбудовано-прибудованими приміщеннями громадського призначення <strong>«Перлина Дніпра»</strong> розміститься на земельній ділянці площею <span class="space">11 200,0 м<sup>2</sup></span>, що знаходиться в районі Старої Митниці на перетин вулиць Козацька та Припортова навпроти Річкового вокзалу.</p>
+					<p>Таке розташування забезпечує майбутнім мешканцям житлового комплексу мальовничі види з вікон квартир на річку Дніпро, прогулянки вздовж набережної, а також дає можливість користуватися всіма зручностями вже наявної навколо комплексу розвиненої інфраструктури.</p>
 				</div>
 				<div class="col-md-4">
 					<%= link_to (image_tag "description-image-new.jpg", class: 'img-responsive img-raised img-rounded'), image_path("description-image-new.jpg"), data: {lightbox: 'home-page'}, class: 'home-img-link' %>
@@ -74,7 +74,7 @@
 </div>
 <section id="features" class="features">
 	<div class="container">
-		<h1 class="text-center">Переваги</h1>
+		<h1 class="title text-center">Переваги</h1>
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="info">
@@ -133,7 +133,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 	<div class="container">
 		<div class="row">

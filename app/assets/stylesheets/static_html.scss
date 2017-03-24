@@ -1,18 +1,11 @@
-// Place all the styles related to the static_html controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 // HOME PAGE
-#intro {
-	height: 100vh;
-	.container {
-		padding-top: 30vh;
-	}
-}
-
-.home-page {
-    background-image: asset_url("geometry-bg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+.index-page {
+    #intro {
+        height: 100vh;
+        .container {
+            padding-top: 30vh;
+        }
+    }
 	.main {
 		padding: 40px;
 	}
@@ -32,20 +25,10 @@
 		.title, .address {
 			text-align: center;
 		}
-		.title {
-			line-height: 2em;
-			font-weight: 700;
-		}
-		h1.title {
-			font-size: 3em;
-		}
-		h2.title {
-			font-size: 2.5em;
-		}
-		.address {
-			font-size: 2em;
-			line-height: 4em;
-		}
+        .address {
+            @extend .text-primary;
+            margin: 70px 0;
+        }
 		.text {
 			&:last-child {
 				padding-top: 40px;
@@ -57,10 +40,14 @@
 				line-height: 2.5;
 				text-align: center;
 				strong {
-					color: $bright-purple;
-					text-transform: capitalize;
-					font-style: italic;
+                    @include pearl-title();
 				}
+                .space {
+                    color: $brand-info;
+                    cursor: pointer;
+                    font-weight: 600;
+                    border-bottom: 1px dashed $brand-info;
+                }
 			}
 		}
 		.home-img-link img {
@@ -69,9 +56,6 @@
 		.statistic {
             @include stat-big-num();
 			margin-bottom: 20px;
-			.title {
-				line-height: 2em;
-			}
 		}
 	}
 }
@@ -97,8 +81,7 @@
 	}
 	h1 {
 		color: $white-text;
-		margin-bottom: 30px;
-		font-weight: 700;
+		margin-bottom: 50px;
 	}
 	.info {
 		text-align: center;
@@ -111,81 +94,64 @@
 			color: $white-text;
 		}
 	}
-}
-
-.map-place {
-	h6 {
-		font-family: 'Roboto', sans-serif;
-		color: $text;
-		margin: 0;
-		font-weight: bold;
-	}
-	hr {
-		border-width: 1px !important;
-		margin: 2px 0 !important;
-	}
+    .btn {
+        margin: 30px 0;
+    }
 }
 
 // ABOUT
-.about-panorama {
-	margin-top: 75px;
-	background-image: asset-url("dnepr-panorama.jpg");
-	background-size: cover;
-	background-position: bottom;
-	height: 35vh;
-}
-#about-carousel, #conception-carousel {
-	#about-us {
-		position: absolute;
-		top: 90px;
-		left: 25px;
-		width: 25%;
-		z-index: 10;
-		.content {
-			text-align: justify;
-		}
-	}
-	.header-filter:after {
-		background: rgba(0, 0, 0, 0.2);
-	}
-	.carousel-control {
-		width: 5%;
-	}
-	.carousel-indicators {
-		bottom: 40px;
-	}
-	.big-image {
-		height: 75vh;
-		background-size: cover;
-		background-position: center bottom;
-	}
-}
 
-#conception, #transport {
-	.main-raised {
-		margin: -20px 30px -20px;
-	}
-	.text {
-		font-size: 1.2em;
-		line-height: 1.5;
-		p {
-			text-align: center;
-		}
-		ul {
-			li {
-				margin: 10px 0;
-				&:last-child {
-					margin-bottom: 35px;
-				}
-			}
-		}
-	}
-	#transport-map {
-		height: 75vh;
-	}
-	.info {
-		text-align: center;
-	}
+.about-page {
+    .intro-fireworks {
+        background-image: asset-url("intro-bg-fireworks.jpg");
+        background-size: cover;
+        background-position: center;
+        &.header-filter::after {
+            background: rgba($brand-purple, .4);
+        }
+    }
+    section {
+        .main-raised {
+            margin: -20px 30px -20px;
+        }
+        .title {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+        h3 {
+            @extend .text-primary;
+        }
+        p {
+            font-size: 1.4em;
+            line-height: 2;
+            text-align: center;
+            strong {
+                @include pearl-title();
+            }
+        }
+        .info {
+            text-align: center;
+            .icon {
+                @extend .text-primary;
+            }
+        }
+        #transport-map {
+            height: 90vh;
+            p {
+                strong {
+                    @include pearl-title();
+                    font-size: 1.3em;
+                    display: block;
+                    text-align: center;
+                }
+                font-size: 1.1em;
+                line-height: 1.5;
+                text-align: left;
+            }
+        }
+    }
 }
 
 // CONTACTS
