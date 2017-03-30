@@ -17,16 +17,16 @@ gem "rmagick"
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'normalize-rails'
 gem 'devise'
-gem 'rubocop'
 gem 'puma'
 gem 'lightbox2-rails'
 
 group :development do
 	gem 'annotate'
-    gem 'sqlite3'
-    gem 'byebug'
-    gem 'web-console', '~> 2.0'
-    gem 'spring'
+  gem 'sqlite3'
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+	gem 'rubocop'
 	gem 'capistrano',         require: false
 	gem 'capistrano-rvm',     require: false
 	gem 'capistrano-rails',   require: false

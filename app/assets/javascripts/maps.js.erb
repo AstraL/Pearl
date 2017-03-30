@@ -107,7 +107,7 @@ function transportMap() {
         map: map,
         position: salesCoords,
         animation: google.maps.Animation.DROP,
-        icon: '<%= asset_path('markers/pearl.png') %>',
+        icon: '<%= asset_path('markers/pearl_mini.png') %>',
         zIndex: 1
     });
     var directionsDisplay = new google.maps.DirectionsRenderer;
@@ -126,51 +126,51 @@ function transportMap() {
     var places = [{
         name: 'Вокзал',
         place_id: 'ChIJPTL_RIRL0UARVn0rzvfuYCE',
-        icon: 'train.png'
+        icon: '<%= asset_path("markers/train.png") %>'
     },{
         name: 'Любава',
         place_id: 'ChIJzWjwN4JM0UARMcjgasbav4I',
-        icon: 'mall.png'
+        icon: '<%= asset_path("markers/mall.png") %>'
     },{
         name: 'Днепроплаза',
         place_id: 'ChIJqYIMYAxL0UARcB-x9gv2tkg',
-        icon: 'mall.png'
+        icon: '<%= asset_path("markers/mall.png") %>'
     },{
         name: 'Депот',
         place_id: 'ChIJZ9woR6hL0UAR1QFrezxcBeQ',
-        icon: 'mall.png'
+        icon: '<%= asset_path("markers/mall.png") %>'
     },{
         name: 'Матрикс',
         place_id: 'ChIJe1siQQ1L0UAR63i6dt4mJ9Q',
-        icon: 'fitness.png'
+        icon: '<%= asset_path("markers/fitness.png") %>'
     },{
         name: 'Спортлайф',
         place_id: 'ChIJda6qiRFL0UAREr8lVbemORg',
-        icon: 'fitness.png'
+        icon: '<%= asset_path("markers/fitness.png") %>'
     },{
         name: 'Школа №33',
         place_id: 'ChIJh3ZwnBJL0UARW4n42bRr0dw',
-        icon: 'school.png'
+        icon: '<%= asset_path("markers/school.png") %>'
     },{
         name: 'Школа №21',
         place_id: 'ChIJ15cMGA9L0UARSNqi3ylsKXo',
-        icon: 'school.png'
+        icon: '<%= asset_path("markers/school.png") %>'
     },{
         name: 'Школа №31',
         place_id: 'ChIJbZCMbGVL0UARiHHx-54DH8M',
-        icon: 'school.png'
+        icon: '<%= asset_path("markers/school.png") %>'
     },{
         name: 'Садик №34',
         place_id: 'ChIJ611abHBL0UARVUw41ZHbQJM',
-        icon: 'daycare.png'
+        icon: '<%= asset_path("markers/daycare.png") %>'
     },{
         name: 'Садик №90',
         place_id: 'ChIJFzFF7Q1L0UARpkAc-Zf7Di4',
-        icon: 'daycare.png'
+        icon: '<%= asset_path("markers/daycare.png") %>'
     },{
         name: 'Садик №91',
         place_id: 'ChIJ12vku3NL0UARx0CLmDB4bDo',
-        icon: 'daycare.png'
+        icon: '<%= asset_path("markers/daycare.png") %>'
     }];
     var infoWindow = new google.maps.InfoWindow({
         zIndex: 100
