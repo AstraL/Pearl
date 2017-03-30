@@ -182,7 +182,7 @@ function transportMap() {
                 map: map,
                 position: place.geometry.location,
                 animation: google.maps.Animation.DROP,
-                icon: 'assets/markers/' + place.icon_custom,
+                icon: place.icon_custom,
                 zIndex: 10
             });
             var placeInfo = {};
