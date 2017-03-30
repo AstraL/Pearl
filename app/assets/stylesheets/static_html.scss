@@ -43,10 +43,9 @@
                     @include pearl-title();
 				}
                 .space {
-                    color: $brand-info;
                     cursor: pointer;
                     font-weight: 600;
-                    border-bottom: 1px dashed $brand-info;
+                    border-bottom: 1px dashed $text;
                 }
 			}
 		}
@@ -56,6 +55,9 @@
 		.statistic {
             @include stat-big-num();
 			margin-bottom: 20px;
+			.title {
+				margin-top: 0;
+			}
 		}
 	}
 }

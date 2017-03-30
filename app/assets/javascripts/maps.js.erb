@@ -1,33 +1,4 @@
 var salesCoords = {lat: 49.43697, lng: 32.10042};
-var purpleStyle = [
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#444444"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#f2f2f2"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    }
-];
 
 function contactsMap() {
     var map;
@@ -98,7 +69,7 @@ function transportMap() {
 
     map = new google.maps.Map(document.getElementById("transport-map"), {
         center: salesCoords,
-        zoom: 15,
+        zoom: 14,
         mapTypeControl: false,
         scrollwheel: false
     });
