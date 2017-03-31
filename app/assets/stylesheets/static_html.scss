@@ -25,6 +25,9 @@
 		.title, .address {
 			text-align: center;
 		}
+		h1.title {
+			font-family: $cursive-font;
+		}
         .address {
             @extend .text-primary;
             margin: 70px 0;
@@ -38,7 +41,7 @@
 				color: $text;
 				margin: 0;
 				line-height: 2.5;
-				text-align: center;
+				text-align: justify;
 				strong {
                     @include pearl-title();
 				}
@@ -105,7 +108,7 @@
 
 .about-page {
     .intro-fireworks {
-        background-image: asset-url("intro-bg-fireworks.jpg");
+        background-image: asset-url("description-image-new.jpg");
         background-size: cover;
         background-position: center;
         &.header-filter::after {
