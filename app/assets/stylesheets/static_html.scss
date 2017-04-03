@@ -1,9 +1,24 @@
 // HOME PAGE
 .index-page {
     #intro {
+        background-image: asset-url("intro-bg-fireworks.jpg");
         height: 100vh;
         .container {
             padding-top: 30vh;
+        }
+        .slogan {
+            font-family: $heading-font;
+            font-size: 5em;
+            font-weight: 600;
+            color: $white-text;
+            padding-top: 20vh;
+            text-align: right;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px $white-text;
+            animation: slogan-glow 3s infinite ease-in-out alternate;
+        }
+        &.header-filter::after {
+            background: rgba($brand-purple, .6);
         }
     }
 	.main {
@@ -213,4 +228,14 @@
 	.content-danger {
 		background: linear-gradient(60deg, #ef5350, #d32f2f);
 	}
+}
+
+
+@keyframes slogan-glow {
+    0%{
+        text-shadow: 0 0 5px $white-text;
+    }
+    100% {
+        text-shadow: 0 0 40px $white-text;
+    }
 }
