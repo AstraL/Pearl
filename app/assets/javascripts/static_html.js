@@ -6,6 +6,8 @@ if (window_width >= 992) {
     $(window).on('scroll', materialKitDemo.checkScrollForParallax);
 }
 
+$('[data-toggle="popover"]').popover();
+
 function navbar() {
     if($('body').hasClass('navbar-color-on-scroll')) {
         $('.navbar').addClass('navbar-transparent');
