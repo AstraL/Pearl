@@ -27,6 +27,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 	gem 'rubocop'
+	gem 'rails_real_favicon'
 	gem 'capistrano',         require: false
 	gem 'capistrano-rvm',     require: false
 	gem 'capistrano-rails',   require: false

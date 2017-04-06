@@ -1,0 +1,60 @@
+{
+  "master_picture": "app/assets/images/logo_mini.png",
+  "favicon_design": {
+    "ios": {
+      "picture_aspect": "background_and_margin",
+      "background_color": "#9c27b0",
+      "margin": "18%",
+      "assets": {
+        "ios6_and_prior_icons": false,
+        "ios7_and_later_icons": true,
+        "precomposed_icons": false,
+        "declare_only_default_icon": true
+      },
+      "app_name": "\u0416\u041a \"\u041f\u0435\u0440\u043b\u0438\u043d\u0430 \u0414\u043d\u0456\u043f\u0440\u0430\""
+    },
+    "desktop_browser": [
+
+    ],
+    "windows": {
+      "picture_aspect": "white_silhouette",
+      "background_color": "#9f00a7",
+      "on_conflict": "override",
+      "assets": {
+        "windows_80_ie_10_tile": false,
+        "windows_10_ie_11_edge_tiles": {
+          "small": true,
+          "medium": true,
+          "big": true,
+          "rectangle": true
+        }
+      },
+      "app_name": "\u0416\u041a \"\u041f\u0435\u0440\u043b\u0438\u043d\u0430 \u0414\u043d\u0456\u043f\u0440\u0430\""
+    },
+    "android_chrome": {
+      "picture_aspect": "shadow",
+      "theme_color": "#9c27b0",
+      "manifest": {
+        "name": "\u041f\u0435\u0440\u043b\u0438\u043d\u0430 \u0414\u043d\u0456\u043f\u0440\u0430",
+        "start_url": "http:\/\/perlyna-dnipra.com.ua",
+        "display": "standalone",
+        "orientation": "not_set",
+        "on_conflict": "override",
+        "declared": true
+      },
+      "assets": {
+        "legacy_icon": false,
+        "low_resolution_icons": false
+      }
+    },
+    "safari_pinned_tab": {
+      "picture_aspect": "silhouette",
+      "theme_color": "#9c27b0"
+    }
+  },
+  "settings": {
+    "scaling_algorithm": "Mitchell",
+    "error_on_image_too_small": false
+  }
+}
+
