@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322223218) do
+ActiveRecord::Schema.define(version: 20170406005135) do
 
   create_table "apartaments", force: :cascade do |t|
     t.string   "image"
@@ -39,10 +39,11 @@ ActiveRecord::Schema.define(version: 20170322223218) do
     t.string   "title"
     t.string   "address"
     t.string   "image"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "default_floor"
     t.string   "nodefault_floor"
+    t.boolean  "disabled",        default: false
   end
 
   create_table "posts", force: :cascade do |t|

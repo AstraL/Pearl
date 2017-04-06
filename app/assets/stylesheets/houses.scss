@@ -21,6 +21,15 @@
                 color: $brand-yellow;
             }
         }
+        &.disabled {
+            filter: grayscale(90%);
+            cursor: default;
+            &:hover {
+                .card-title {
+                    color: $white-text;
+                }
+            }
+        }
     }
 	footer {
 		transform: translateY(100%);

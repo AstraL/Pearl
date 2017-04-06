@@ -3,7 +3,7 @@
     <div class="row">
         <% @houses.each do |house| %>
         <div class="col-md-4">
-            <%= link_to house, class: 'house-link card card-raised card-nav-tabs' do %>
+            <%= link_to house, class: disabled_check(house) do %>
                 <div class="header header-primary text-center">
                     <%= content_tag(:h4, house.title, class: 'card-title') %>
                 </div>
