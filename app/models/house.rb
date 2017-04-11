@@ -11,7 +11,7 @@
 #
 
 class House < ApplicationRecord
-
+	include HouseAdmin
 	has_many :apartaments
 
 	mount_uploader :image, HouseUploader
