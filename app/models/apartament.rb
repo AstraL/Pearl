@@ -17,7 +17,7 @@
 #
 
 class Apartament < ApplicationRecord
-
+	include ApartamentAdmin
 	belongs_to :house
 
 	mount_uploader :image, ApartamentUploader

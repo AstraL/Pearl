@@ -1,0 +1,33 @@
+ru:
+  activerecord:
+    models:
+      user:
+        one: "Пользователь"
+        other: "Пользователи"
+      post:
+        one: "Запись"
+        other: "Записи"
+      house:
+        one: "Очередь"
+        other: "Очереди"
+      apartament:
+        one: "Квартира"
+        other: "Квартиры"
+    attributes:
+      user:
+        id: "ID"
+        login: "Логин"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        avatar: "Аватар"
+        email: "E-mail"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        remember_created_at: "Куки созданы"
+        sign_in_count: "Количество входов"
+        current_sign_in_at: "Вход выполнен"
+        last_sign_in_at: "Последний вход"
+        current_sign_in_ip: "Текущий IP"
+        last_sign_in_ip: "Последний IP"
+        created_at: "Создан"
+        updated_at: "Обновлён"

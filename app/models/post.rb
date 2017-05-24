@@ -13,6 +13,7 @@
 #
 
 class Post < ApplicationRecord
+	include PostAdmin
 
 	TYPE = ["news", "offers", "blog"]
 
