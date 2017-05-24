@@ -1,5 +1,5 @@
 # Change these
-server '138.68.65.83', port: 22, roles: [:web, :app, :db], primary: true
+server '95.46.45.98', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:AstraL/Pearl.git'
 set :application,     'pearl'
