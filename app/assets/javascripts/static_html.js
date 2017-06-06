@@ -10,26 +10,12 @@ $('[data-toggle="popover"]').popover();
 
 function navbar() {
     if($('body').hasClass('navbar-color-on-scroll')) {
-        $('.navbar').addClass('navbar-transparent');
+        $('.navbar').removeClass('navbar-primary').addClass('navbar-transparent');
         $(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
     } else {
-        $('.navbar').removeClass('navbar-transparent');
+        $('.navbar').removeClass('navbar-transparent').addClass('navbar-primary');
     }
 }
-
-// Map instead of port foto
-var image = $('#port-photo').html();
-$('#map-trigger').on('click', function() {
-    var container = $('#map-port');
-    var height = container.height();
-    if(container.attr('data-content') === "image") {
-        container.css('height', height).attr('data-content', 'map');
-        mapPort();
-    } else {
-        container.html('');
-        container.html(image).attr('data-content', 'image');
-    }
-});
 var loader = $('#loader');
 
 $(document).ready(function() {
@@ -42,6 +28,7 @@ document.addEventListener('turbolinks:request-start', function() {
 
 document.addEventListener('turbolinks:load', function() {
     loaderHide(loader);
+    navbar();
 });
 
 
@@ -59,6 +46,10 @@ lightbox.option({
     fitImagesInViewport: true,
     disableScrolling: true,
     positionFromTop: 50
+});
+
+$('a.inactive').click(function(e) {
+    e.preventDefault();
 });
 
 

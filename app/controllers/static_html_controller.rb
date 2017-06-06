@@ -9,4 +9,12 @@ class StaticHtmlController < ApplicationController
 	def contacts
 		@feedback = Feedback.new
 	end
+
+	def building
+
+	end
+
+	def documents
+
+	end
 end

@@ -8,7 +8,9 @@
 			<ul class="nav navbar-nav navbar-right">
 				<%= content_tag(:li, link_to('Головна', root_path)) %>
 				<%= content_tag(:li, link_to('Проект', about_path)) %>
-				<%= content_tag(:li, link_to('Квартири', houses_path)) %>
+				<%= content_tag(:li, link_to('Планування', houses_path)) %>
+                <%= content_tag(:li, link_to('Хід будівництва', building_path, class: 'inactive')) %>
+                <%= content_tag(:li, link_to('Документація', documents_path, class: 'inactive')) %>
 				<%#= content_tag(:li, link_to('Блог', blog_path)) %>
 				<%= content_tag(:li, link_to('Контакти', contacts_path)) %>
 			</ul>

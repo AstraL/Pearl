@@ -19,8 +19,14 @@ body {
 .navbar {
 	border-radius: 0;
 	font-family: $heading-font;
+    background-color: $brand-purple;
     &.navbar-primary {
         background-color: $brand-purple;
+    }
+    &.navbar-transparent {
+        .navbar-header {
+            opacity: 0;
+        }
     }
 	.navbar-header {
 		display: inline-block;
@@ -37,6 +43,10 @@ body {
 		font-size: 16px;
 		padding-top: 17px;
 		padding-bottom: 17px;
+        &.inactive {
+            color: #afafaf;
+            cursor: default;
+        }
 	}
 }
 
