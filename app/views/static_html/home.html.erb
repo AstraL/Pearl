@@ -22,63 +22,89 @@
         </div>
     </div>
 </div>
-<div class="main main-raised">
-	<div class="container">
+<div class="container">
+    <div class="main main-raised">
 		<section class="general">
 			<h1 class="title">Житловий комплекс "Перлина Дніпра"</h1>
             <%= content_tag(:h3, 'Будівельна адреса: Черкаси, вул. Козацька 1/1', class: 'title address') %>
 			<hr>
-			<div class="row">
-				<div class="text col-md-8">
-					<p>Житловий комплекс з вбудовано-прибудованими приміщеннями громадського призначення <strong>«Перлина Дніпра»</strong> розміститься на земельній ділянці площею <span class="space">11 200,0 м<sup>2</sup></span>, що знаходиться в районі Старої Митниці на перетин вулиць Козацька та Припортова навпроти Річкового вокзалу.</p>
-					<p>Таке розташування забезпечує майбутнім мешканцям житлового комплексу мальовничі види з вікон квартир на річку Дніпро, прогулянки вздовж набережної, а також дає можливість користуватися всіма зручностями вже наявної навколо комплексу розвиненої інфраструктури.</p>
-					<div class="col-md-4">
-						<%= link_to (image_tag "description-image-new.jpg", class: 'img-responsive img-raised img-rounded'), image_path("description-image-new.jpg"), data: {lightbox: 'home-page'}, class: 'home-img-link' %>
-					</div>
-					<div class="col-md-4">
-						<%= link_to (image_tag "intro-bg.jpg", class: 'img-responsive img-raised img-rounded'), image_path("intro-bg.jpg"), data: {lightbox: 'home-page'}, class: 'home-img-link' %>
-					</div>
-					<div class="col-md-4">
-						<%= link_to (image_tag "conception/conception2.jpg", class: 'img-responsive img-raised img-rounded'), image_path("conception/conception2.jpg"), data: {lightbox: 'home-page'}, class: 'home-img-link' %>
-					</div>
-					<div class="col-md-4">
-						<%= link_to (image_tag "pearl-photos/8.jpg", class: 'img-responsive img-raised img-rounded'), image_path("pearl-photos/1.jpg"), data: {lightbox: 'home-page'}, class: 'home-img-link' %>
-					</div>
-					<div class="col-md-4">
-						<%= link_to (image_tag "pearl-photos/6.jpg", class: 'img-responsive img-raised img-rounded'), image_path("pearl-photos/6.jpg"), data: {lightbox: 'home-page'}, class: 'home-img-link' %>
-					</div>
-					<div class="col-md-4">
-						<%= link_to (image_tag "pearl-photos/7.jpg", class: 'img-responsive img-raised img-rounded'), image_path("pearl-photos/7.jpg"), data: {lightbox: 'home-page'}, class: 'home-img-link' %>
-					</div>
-				</div>
-				<div class="col-md-4 statistic">
-					<h3 class="title">Загальна характеристика першого будинку комплексу</h3>
-					<div class="counter col-sm-8 col-sm-offset-2">
-					<span class="number">
-						11 200
-					</span>
-						<p>Площа ділянки (м<sup>2</sup>)</p>
-					</div>
-					<div class="counter col-sm-8 col-sm-offset-2">
-					<span class="number">
-						6
-					</span>
-						<p>Секцій</p>
-					</div>
-					<div class="counter col-sm-8 col-sm-offset-2">
-					<span class="number">
-						10
-					</span>
-						<p>Поверхів</p>
-					</div>
-					<div class="counter col-sm-8 col-sm-offset-2">
-					<span class="number">
-						216
-					</span>
-						<p>Всього квартир</p>
-					</div>
-				</div>
-			</div>
+            <div class="text row">
+                <div class="col-md-12">
+                    <p>ЖК <strong>«Перлина Дніпра»</strong> буде складатися з двох однакових житлових будинків з вбудовано-прибудованими торгівельними та офісними приміщеннями.
+                        Комплекс буде мати власну сучасну інфраструктуру - проект передбачає використання нежитлових приміщень під офіси, магазини, салони краси, фітнес-центри та інше.</p>
+                </div>
+                <div class="col-md-12">
+                    <h3 class="title">Загальна характеристика кожного з будинків:</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-building') %>
+                                </div>
+                                <h6 class="info-title">10 поверхів, 6 секцій,<br>4 квартири на поверсі</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-3d-buildings') %>
+                                </div>
+                                <h6 class="info-title">Торгівельні та офісні приміщення на першому поверсі</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-elevator') %>
+                                </div>
+                                <h6 class="info-title">Сучасний ліфт</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-brickwall') %>
+                                </div>
+                                <h6 class="info-title">Екологічно чиста силіктна цегла</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-plug') %>
+                                </div>
+                                <h6 class="info-title">Лічильники електроенергії в коридорах загального користування</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-pipes') %>
+                                </div>
+                                <h6 class="info-title">Лічильники води в санвузлах і ванних кімнатах, загально будинковий лічильник системи опалення</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-gas-pipe') %>
+                                </div>
+                                <h6 class="info-title">Газові лічильники у кожній квартирі</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="info">
+                                <div class="icon">
+                                    <%= content_tag(:i, '', class: 'fi flaticon-window') %>
+                                </div>
+                                <h6 class="info-title">Вікна зі зберігаючим п’ятикамерним профілем та двокамерним склопакетом</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 			<hr>
 		</section>
 	</div>

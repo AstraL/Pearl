@@ -44,16 +44,10 @@
 		padding: 40px;
         &.main-raised {
             margin: 0 30px 0;
+            opacity: .9;
         }
 	}
 	.general {
-		.row {
-			margin-top: 15px;
-			margin-bottom: 15px;
-			&:last-child {
-				margin-bottom: 45px;
-			}
-		}
 		hr {
 			border-color: $divider-color;
 			border-width: 2px;
@@ -99,6 +93,23 @@
 				margin-top: 0;
 			}
 		}
+        h3 {
+            @extend .text-primary;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 2;
+            text-align: center;
+            strong {
+                @include pearl-title();
+            }
+        }
+        .info {
+            text-align: center;
+            .icon {
+                @extend .text-primary;
+            }
+        }
 	}
 }
 
