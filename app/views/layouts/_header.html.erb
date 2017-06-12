@@ -1,4 +1,4 @@
-<nav class="navbar navbar-primary navbar-fixed-top">
+<nav class="navbar navbar-fixed-top">
 	<div class="container">
 		<div class="collapse navbar-collapse">
 			<div class="navbar-header">
@@ -7,10 +7,27 @@
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<%= content_tag(:li, link_to('Головна', root_path)) %>
-				<%= content_tag(:li, link_to('Проект', about_path)) %>
-				<%= content_tag(:li, link_to('Планування', houses_path)) %>
-                <%= content_tag(:li, link_to('Хід будівництва', building_path, class: 'inactive')) %>
-                <%= content_tag(:li, link_to('Документація', documents_path, class: 'inactive')) %>
+                <li class="dropdown">
+                    <%= link_to '#', data: {toggle: 'dropdown'}, role: 'button', class: 'dropdown-toggle' do %>
+                        <%= 'Планування' %>
+                        <%= content_tag(:span, '', class: 'caret') %>
+                    <% end %>
+                    <ul class="dropdown-menu">
+                        <%= content_tag(:li, link_to('Житлові приміщення', houses_path)) %>
+                        <%= content_tag(:li, link_to('Коммерційні приміщення', '#', class: 'inactive')) %>
+                    </ul>
+                </li>
+				<%= content_tag(:li, link_to('Розташування', about_path)) %>
+                <li class="dropdown">
+                    <%= link_to '#', data: {toggle: 'dropdown'}, role: 'button', class: 'dropdown-toggle' do %>
+                        <%= 'Будівництво' %>
+                        <%= content_tag(:span, '', class: 'caret') %>
+                    <% end %>
+                    <ul class="dropdown-menu">
+                        <%= content_tag(:li, link_to('Хід будівництва', building_path, class: 'inactive')) %>
+                        <%= content_tag(:li, link_to('Документація', documents_path, class: 'inactive')) %>
+                    </ul>
+                </li>
 				<%#= content_tag(:li, link_to('Блог', blog_path)) %>
 				<%= content_tag(:li, link_to('Контакти', contacts_path)) %>
 			</ul>
