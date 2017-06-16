@@ -19,6 +19,7 @@ gem 'normalize-rails'
 gem 'devise'
 gem 'puma'
 gem 'lightbox2-rails'
+gem 'jquery-turbolinks'
 
 group :development do
 	gem 'annotate'

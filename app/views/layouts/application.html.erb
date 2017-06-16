@@ -6,7 +6,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><%= full_title(yield(:title)) %></title>
-		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		<%= csrf_meta_tags %>
         <%= render 'application/favicon' %>
         <meta property="og:image" content="http://<%= request.host + image_url("og_image.jpg")%>">
@@ -25,7 +25,7 @@
 	  	</main>
 	  	<%= render 'layouts/social' %>
 	  	<%= render 'layouts/footer' %>
-	  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <%= yield :maps %>
 
         <script>
