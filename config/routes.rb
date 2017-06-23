@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get '/blog' => 'blog#index', as: :blog
   get '/building' => 'static_html#building', as: :building
   get '/documents' => 'static_html#documents', as: :documents
+  get '/commercial' => 'static_html#commercial', as: :commercial
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

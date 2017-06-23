@@ -17,4 +17,8 @@ class StaticHtmlController < ApplicationController
 	def documents
 
 	end
+
+	def commercial
+		
+	end
 end

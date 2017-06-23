@@ -2,6 +2,11 @@
 .index-page {
     #intro {
         background-image: asset-url("intro-bg.jpg");
+    }
+    #complex {
+        background-image: asset-url("complex-bg.jpg");
+    }
+    #intro, #complex {
         background-position: bottom center;
         background-attachment: fixed;
         height: 100vh;
@@ -60,6 +65,34 @@
                 }
             }
         }
+        .offers {
+            .bonus {
+                margin-top: 20px;
+                height: 135px;
+                .content {
+                    height: 100%;
+                    padding: 25px 5px;
+                }
+                h6 {
+                    text-align: center;
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+            #first {
+                 background: linear-gradient(60deg,#26c6da,#0097a7);
+            }
+            #credit {
+                background: linear-gradient(60deg,#66bb6a,#388e3c);
+            }
+            #discount {
+                background:linear-gradient(60deg,#ffa726,#f57c00)
+            }
+            #lowprice {
+                background: linear-gradient(60deg,#ef5350,#d32f2f)
+            }
+
+        }
     }
 	.main {
 		padding: 40px;
@@ -69,7 +102,7 @@
             transition: margin .3s ease-in-out;
         }
 	}
-	.general {
+	.general, #commercial {
 		hr {
 			border-color: $divider-color;
 			border-width: 2px;
@@ -132,6 +165,9 @@
             .icon {
                 @extend .text-primary;
             }
+        }
+        .card-apartaments {
+            @include card-apartaments();
         }
 	}
 }
