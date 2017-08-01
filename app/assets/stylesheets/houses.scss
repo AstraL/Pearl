@@ -69,3 +69,11 @@
         }
     }
 }
+
+.card-apartaments {
+    @include card-apartaments();
+}
+
+.section-link:focus {
+    outline: none;
+}

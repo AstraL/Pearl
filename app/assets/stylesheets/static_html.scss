@@ -6,6 +6,24 @@
     #complex {
         background-image: asset-url("complex-bg.jpg");
     }
+    #complex-selectable {
+        background-image: asset-url("complex-bg.jpg");
+        background-position: top center;
+        a.section-link {
+            z-index: 100;
+            polygon {
+                stroke-width: 1px;
+                fill: rgba(255, 255, 255, .1);
+                stroke: rgba(255, 255, 255, .1);
+            }
+            &:hover {
+                polygon {
+                    stroke: $brand-purple;
+                    fill: rgba($brand-purple, .3);
+                }
+            }
+        }
+    }
     #intro, #complex {
         background-position: bottom center;
         background-attachment: fixed;
