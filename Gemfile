@@ -23,10 +23,10 @@ gem 'jquery-turbolinks'
 
 group :development do
 	gem 'annotate'
-  gem 'sqlite3'
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+	gem 'sqlite3'
+	gem 'byebug'
+	gem 'web-console', '~> 2.0'
+	gem 'spring'
 	gem 'rubocop'
 	gem 'rails_real_favicon'
 	gem 'capistrano',         require: false
