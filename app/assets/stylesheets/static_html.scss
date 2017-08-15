@@ -7,8 +7,9 @@
         background-image: asset-url("complex-bg.jpg");
     }
     #complex-selectable {
-        background-image: asset-url("complex-bg.jpg");
+        background-image: asset-url("complex-bg-slogan.jpg");
         background-position: top center;
+	    height: 100vh;
         a.section-link {
             z-index: 100;
             polygon {
