@@ -13,9 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
-//= require material.min
-//= require material-kit
-//= require maps.js.erb
-//= require static_html
-//= require houses
