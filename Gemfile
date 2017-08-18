@@ -11,6 +11,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rails_admin_material_theme', '~> 0.2.0'
 gem 'rails_admin', '~> 1.0'
+gem 'bootstrap', '~> 4.0.0.beta'
+gem "font-awesome-rails"
 gem "carrierwave"
 gem "rmagick"
 gem 'devise'

@@ -1,0 +1,5 @@
+@mixin filter($color) {
+	&[filter-color="purple"]{
+		@include linear-gradient(rgba($black-color,.20), rgba($color, 0.6));
+	}
+}

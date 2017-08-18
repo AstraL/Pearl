@@ -4,14 +4,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&amp;subset=cyrillic" rel="stylesheet">
 		<title><%= full_title(yield(:title)) %></title>
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		<%= csrf_meta_tags %>
     </head>
-	<body class="<%= yield :class %>">
+	<body class="landing-page">
 	  	<%= render 'layouts/header' %>
-	  	<%= render 'layouts/notice' %>
 	  	<main class="wrapper">
 			<%= yield %>
 	  	</main>

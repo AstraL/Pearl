@@ -45,10 +45,16 @@ GEM
       rake (>= 10.4, < 13.0)
     arel (7.1.4)
     ast (2.3.0)
+    autoprefixer-rails (7.1.2.6)
+      execjs
     bcrypt (3.1.11)
     bcrypt (3.1.11-x64-mingw32)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap (4.0.0.beta)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (~> 1.11.1)
+      sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.0.6)
     capistrano (3.8.1)
@@ -156,6 +162,7 @@ GEM
       ast (~> 2.2)
     pg (0.20.0)
     pg (0.20.0-x64-mingw32)
+    popper_js (1.11.1)
     powerpack (0.1.1)
     puma (3.9.1)
     rack (2.0.3)
@@ -295,6 +302,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bootstrap (~> 4.0.0.beta)
   byebug
   capistrano
   capistrano-bundler
@@ -304,6 +312,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
