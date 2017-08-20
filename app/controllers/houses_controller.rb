@@ -5,10 +5,6 @@ class HousesController < ApplicationController
 		@houses = House.all
 	end
 
-	def show
-		@one_room = Apartament.where("rooms = '1'")
-	end
-
 	private
 
 	def set_house

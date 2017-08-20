@@ -78,7 +78,7 @@
                     font-size: 2em;
                     font-weight: bold;
                     text-align: center;
-                    &:first-child {
+                    &:first-child, &:nth-child(2) {
                         margin-bottom: 25px;
                     }
                 }
