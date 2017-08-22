@@ -99,16 +99,24 @@
                 }
             }
             #first {
-                 background: linear-gradient(60deg,#26c6da,#0097a7);
+	            background: linear-gradient(60deg,#26c6da,#0097a7);
+	            text-decoration: none;
+	            outline: none;
             }
             #credit {
                 background: linear-gradient(60deg,#66bb6a,#388e3c);
+	            text-decoration: none;
+	            outline: none;
             }
             #discount {
-                background:linear-gradient(60deg,#ffa726,#f57c00)
+                background:linear-gradient(60deg,#ffa726,#f57c00);
+	            text-decoration: none;
+	            outline: none;
             }
             #lowprice {
-                background: linear-gradient(60deg,#ef5350,#d32f2f)
+                background: linear-gradient(60deg,#ef5350,#d32f2f);
+	            text-decoration: none;
+	            outline: none;
             }
 
         }
@@ -356,6 +364,44 @@
 				text-align: justify;
 			}
 		}
+	}
+}
+
+/*----Offers modals-----*/
+#offer-first, #offer-discount, #offer-lowprice, #offer-credit {
+	.modal-title, .modal-content {
+		color: #fff;
+	}
+	.modal-content {
+		line-height: 2;
+		text-align: justify;
+	}
+	.modal-title {
+		font-weight: bold;
+	}
+}
+
+#offer-first {
+	.modal-content {
+		background: linear-gradient(60deg,#26c6da,#0097a7);
+	}
+}
+
+#offer-credit {
+	.modal-content {
+		background: linear-gradient(60deg,#66bb6a,#388e3c);
+	}
+}
+
+#offer-discount {
+	.modal-content {
+		background:linear-gradient(60deg,#ffa726,#f57c00);
+	}
+}
+
+#offer-lowprice {
+	.modal-content {
+		background: linear-gradient(60deg,#ef5350,#d32f2f);
 	}
 }
 

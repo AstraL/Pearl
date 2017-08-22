@@ -24,32 +24,32 @@
         </div>
 		<div class="row offers">
 			<div class="col-md-2 col-md-offset-2">
-				<div id="first" class="card bonus">
+				<a href="#" id="first" class="card bonus" data-toggle="modal" data-target="#offer-first">
 					<div class="content">
 						<h6>0% розстрочка</h6>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="col-md-2">
-				<div id="credit" class="card bonus">
+				<a href="#" id="credit" class="card bonus" data-toggle="modal" data-target="#offer-credit">
 					<div class="content">
 						<h6>5% кредит</h6>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="col-md-2">
-				<div id="discount" class="card bonus">
+				<a href="#" id="discount" class="card bonus" data-toggle="modal" data-target="#offer-discount">
 					<div class="content">
 						<h6>Знижки!</h6>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="col-md-2">
-				<div id="lowprice" class="card bonus">
+				<a href="#" id="lowprice" class="card bonus" data-toggle="modal" data-target="#offer-lowprice">
 					<div class="content">
 						<h6>6-та секція по вигідним цінам</h6>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
     </div>
@@ -203,4 +203,56 @@
 		</div>
 	</div>
 </section>
+<div class="modal fade" id="offer-first" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Розстрочка 0%</h4>
+			</div>
+			<div class="modal-body">
+				Безвідсоткова розстрочка від забудовника до кінця 2018 року. Початковий внесок не менше 30%.<br>За детальною інформацією звертайтеся, будь-ласка, у відділ продажів: м. Черкаси, вул. Козацька, 1/1, тел. 0472-72-42-22, 098-07-111-11, 063-071-10-10.
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="offer-credit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Кредит 5%</h4>
+			</div>
+			<div class="modal-body">
+				Кредит фінансової установи на три роки без додаткових комісій та платежів. Початковий внесок не менше 30%. До 30 грудня 2018 р. кредит надається на пільгових умовах під 5% річних, починаючи з 01.01.2019 р. ставку буде підвищено до 22% річних. Проценти нараховуються на фактичний залишок. Можливе дострокове погашення без штрафних санкцій.<br>За детальною інформацією звертайтеся, будь-ласка, у відділ продажів: м. Черкаси, вул. Козацька, 1/1, тел. 0472-72-42-22, 098-07-111-11, 063-071-10-10.
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="offer-discount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Знижки</h4>
+			</div>
+			<div class="modal-body">
+				При повній оплаті вартості квартири протягом 5-ти робочих днів надається знижка в розмірі 5% її вартості.<br>За детальною інформацією звертайтеся, будь-ласка, у відділ продажів: м. Черкаси, вул. Козацька, 1/1, тел. 0472-72-42-22, 098-07-111-11, 063-071-10-10.
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="offer-lowprice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">6-та секція за вигідними цінами</h4>
+			</div>
+			<div class="modal-body">
+				При повній оплаті вартості квартир, що розташовані у 6-й секції (під’їзді) будинку першої черги будівництва за адресою м. Черкаси, вул. Козацька 1/1 , протягом 5 –ти робочих днів надається знижка в розмірі 8% їх вартості.<br>За детальною інформацією звертайтеся, будь-ласка, у відділ продажів: м. Черкаси, вул. Козацька, 1/1, тел. 0472-72-42-22, 098-07-111-11, 063-071-10-10.
+			</div>
+		</div>
+	</div>
+</div>
 <%= gmaps_call %>
