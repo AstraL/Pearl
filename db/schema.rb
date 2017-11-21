@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117003654) do
+ActiveRecord::Schema.define(version: 20171121200833) do
 
   create_table "apartaments", force: :cascade do |t|
     t.string   "image"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20171117003654) do
     t.datetime "updated_at",    null: false
     t.integer  "section_id"
     t.integer  "house_id"
-    t.string   "type"
   end
 
   create_table "feedbacks", force: :cascade do |t|
