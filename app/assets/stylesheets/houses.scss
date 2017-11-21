@@ -24,7 +24,7 @@
         &.disabled {
             polygon {
                 stroke-width: 0.5px;
-                fill: rgba($text, 0.4);
+                fill: rgba($text, 0.6);
                 stroke: $text;
             }
         }
@@ -50,6 +50,7 @@
         }
         &#house-second {
             left: 10%;
+            display: none;
         }
     }
 }
