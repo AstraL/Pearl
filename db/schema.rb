@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406005135) do
+ActiveRecord::Schema.define(version: 20171117003654) do
 
   create_table "apartaments", force: :cascade do |t|
     t.string   "image"
@@ -23,7 +23,9 @@ ActiveRecord::Schema.define(version: 20170406005135) do
     t.integer  "access"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "section_id"
     t.integer  "house_id"
+    t.string   "type"
   end
 
   create_table "feedbacks", force: :cascade do |t|
@@ -35,6 +37,18 @@ ActiveRecord::Schema.define(version: 20170406005135) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
   create_table "houses", force: :cascade do |t|
     t.string   "title"
     t.string   "address"
@@ -43,7 +57,10 @@ ActiveRecord::Schema.define(version: 20170406005135) do
     t.datetime "updated_at",                      null: false
     t.string   "default_floor"
     t.string   "nodefault_floor"
-    t.boolean  "disabled",        default: false
+    t.boolean  "active",          default: false
+    t.string   "slug"
+    t.string   "points"
+    t.integer  "floors"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -54,6 +71,14 @@ ActiveRecord::Schema.define(version: 20170406005135) do
     t.string   "kind"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.integer  "index"
+    t.string   "points"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "house_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,18 +1,48 @@
 <% content_for :class, 'houses-page' %>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <% @houses.each do |house| %>
-        <div class="col-md-4">
-            <%= link_to house, class: disabled_check(house) do %>
-                <div class="header header-primary text-center">
-                    <%= content_tag(:h4, house.title, class: 'card-title') %>
-                </div>
+        <div class="col-md-10 col-md-offset-1">
+            <div id="houses" class="card">
                 <div class="content">
-                    <%= image_tag "conception/conception3.jpg", class: 'img-responsive img-rounded img-raised' %>
-                    <%= content_tag(:h4, (fa_icon "map-marker", text: house.address), class: 'house-link-address') %>
+                    <svg version="1.1" id="houses_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1162.3 533.3" style="enable-background:new 0 0 1162.3 533.3;" xml:space="preserve">
+                        <image style="overflow:visible;" width="4843" height="2222" xlink:href="<%= image_url("conception/conception1.jpg") %>"  transform="matrix(0.24 0 0 0.24 0 0.5)">
+                        </image>
+                        <% @houses.each do |house| %>
+                            <%= link_to (house_type(house)), class: (house.active ? 'house-link' : 'house-link disabled') do %>
+                                <polygon points="<%= house.points %>"></polygon>
+                            <% end %>
+                        <% end %>
+                    </svg>
+                    <% @houses.each do |house| %>
+                        <div id="house-<%= house.slug %>" class="house-info-card">
+                            <%= content_tag(:h3, house.title, class: 'house-title') %>
+                            <%= content_tag(:h4, house.address, class: 'house-address') %>
+                            <ul class="house-info">
+                                <li>
+                                    <%= content_tag(:span, house.floors, class: 'number') %>
+                                    <%= content_tag(:p, "Поверхи") %>
+                                </li>
+                                <li>
+                                    <%= content_tag(:span, house.sections.count, class: 'number') %>
+                                    <%= content_tag(:p, "Секції") %>
+                                </li>
+                                <li>
+                                    <%= content_tag(:span, "238", class: 'number') %>
+                                    <%= content_tag(:p, "Квартири") %>
+                                </li>
+                                <li>
+                                    <%= content_tag(:span, "2", class: 'number') %>
+                                    <%= content_tag(:p, "Офіси") %>
+                                </li>
+                            </ul>
+                            <ul>
+                                <%#= content_tag(:li, "Початок будівництва: ") %>
+                                <%#= content_tag(:li, "Закінчення будівництва: ") %>
+                            </ul>
+                        </div>
+                    <% end %>
                 </div>
-            <% end %>
+            </div>
         </div>
-        <% end %>
     </div>
 </div>

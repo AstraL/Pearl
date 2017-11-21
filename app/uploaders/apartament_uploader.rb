@@ -32,12 +32,12 @@ class ApartamentUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :show do
-    process :resize_to_fit => [620, 877]
-  end
-
   version :thumb do
     process :resize_to_fit => [210, 388]
+  end
+
+  version :xs do
+    process :resize_to_fit => [105, 244]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

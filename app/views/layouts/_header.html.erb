@@ -14,7 +14,7 @@
                     <% end %>
                     <ul class="dropdown-menu">
                         <%= content_tag(:li, link_to('Житлові приміщення', houses_path)) %>
-                        <%= content_tag(:li, link_to('Нежитлові приміщення', commercial_path)) %>
+                        <%= content_tag(:li, link_to('Нежитлові приміщення', houses_path(type: 'commercial'))) %>
                     </ul>
                 </li>
 				<%= content_tag(:li, link_to('Розташування', about_path)) %>

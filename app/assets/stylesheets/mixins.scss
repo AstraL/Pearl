@@ -94,35 +94,52 @@
 }
 
 @mixin stat-big-num() {
-    .counter {
-        text-align: center;
-        .number {
-            border-bottom: 1px solid $bright-purple;
-            display: block;
-            font-size: 3.5em;
-            font-weight: 800;
-            line-height: 1.5em;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 2.5em;
-        }
+    text-align: center;
+    .number {
+        border-bottom: 1px solid $bright-purple;
+        display: block;
+        font-size: 3.5em;
+        font-weight: 800;
+        line-height: 1.2em;
+    }
+    p {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+}
+
+@mixin card-bg($type) {
+    @if $type == info {
+        background: linear-gradient(60deg,#26c6da,#0097a7);
+    } @else if $type == success {
+        background: linear-gradient(60deg,#66bb6a,#388e3c);
+    } @else if $type == warning {
+        background:linear-gradient(60deg,#ffa726,#f57c00);
+    } @else if $type == primary {
+        background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+    } @else {
+        background: linear-gradient(60deg,#ef5350,#d32f2f);
     }
 }
 
 @mixin card-apartaments() {
     background-position: center center;
-    background-size: cover;
+    background-size: 50%;
+    background-repeat: no-repeat;
     border-radius: 6px;
     text-align: center;
     margin-bottom: 20px;
+    cursor: pointer;
     .content {
         padding: 15px !important;
         position: relative;
         z-index: 2;
-        min-height: 280px;
+        min-height: 155px;
         max-width: 440px;
         margin: 0 auto;
+        .card-title {
+            font-size: 3.5em;
+        }
     }
     [class*="text-"] {
         color: #fff;
@@ -137,7 +154,8 @@
         max-width: 240px;
         margin: 10px auto;
         li {
-            padding: 12px 0;
+            padding: 4px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
             color: $white-text;
         }
@@ -152,7 +170,6 @@
         top: 0;
         content: "";
         border-radius: 6px;
-        background-color: rgba(0, 0, 0, 0.7);
     }
 }
 
@@ -160,4 +177,63 @@
     font-family: $cursive-font;
     color: $bright-purple;
     text-transform: capitalize;
+}
+
+@mixin vh() {
+    height: 100vh;
+}
+
+@mixin bg-cover($bgUrl) {
+    background-image: asset-url($bgUrl);
+    background-size: cover;
+}
+
+@mixin navbar-padding($padding) {
+    padding-top: $padding;
+}
+
+@mixin card-title() {
+    font-family: $heading-font;
+    color: #fff;
+    text-align: center;
+}
+
+@mixin info-card() {
+    background-color: #7b1fa2;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px 20px;
+    h3, h4 {
+        color: #fff;
+        font-family: $heading-font;
+        text-align: center;
+    }
+    h3 {
+        font-size: 1.6em;
+        font-weight: 600;
+        margin: 5px 0 10px;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .house-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #7b1fa2;
+    }
 }

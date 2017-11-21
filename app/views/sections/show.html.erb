@@ -1,0 +1,26 @@
+<% content_for :class, 'section-page navbar-color-on-scroll' %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div id="section-<%= @section.index.to_s %>" class="card card-raised card-nav-tabs">
+                <div class="header header-primary">
+                    <h4 class="card-title">Секція <%= @section.index.to_s %></h4>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <% @section.apartaments.each do |ap| %>
+                                <%= render partial: 'sections/apartament', locals: {ap: ap} %>
+                            <% end %>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="plan-view">
+                                <%= image_tag(@ap.image.url, class: 'img-responsive') %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,8 +2,8 @@ module ApartamentAdmin
 	extend ActiveSupport::Concern
 
 	included do
-		rails_admin do
-			parent House
-		end
+			rails_admin do
+					parent Section
+			end
 	end
 end

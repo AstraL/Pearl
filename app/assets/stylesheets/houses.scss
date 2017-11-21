@@ -1,78 +1,155 @@
 .houses-page {
-    padding-top: 115px;
+    #houses {
+        position: relative;
+    }
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
     .house-link {
-        text-decoration: none;
-        margin-bottom: 25px;
-        .header {
-            .header-success {
-                opacity: 0;
-            }
-        }
-        .card-title {
-            color: $white-text;
-            transition: color .3s linear;
-        }
-        .house-link-address {
-            margin: 30px 0 10px 0;
-            text-align: center;
+        polygon {
+            fill: transparent;
+            stroke-width: 0;
+            stroke: $brand-purple;
         }
         &:hover {
-            .card-title {
-                color: $brand-yellow;
+            polygon {
+                fill: rgba($brand-purple, 0.4);
+                stroke-width: 0.5px;
+                stroke: $brand-purple;
             }
         }
         &.disabled {
-            filter: grayscale(90%);
-            cursor: default;
-            &:hover {
+            polygon {
+                stroke-width: 0.5px;
+                fill: rgba($text, 0.4);
+                stroke: $text;
+            }
+        }
+    }
+    .house-info-card {
+        @include info-card();
+        position: absolute;
+        top: 20%;
+        width: 22%;
+        .house-info {
+            @include stat-big-num();
+            .number {
+                border-color: #fff;
+                font-size: 1.3em;
+                margin-bottom: 2px;
+            }
+            p {
+                font-size: 0.85em;
+            }
+        }
+        &#house-first {
+            right: 10%;
+        }
+        &#house-second {
+            left: 10%;
+        }
+    }
+}
+
+.house-page {
+    #complex-selectable {
+        @include vh();
+        @include bg-cover("complex-bg.jpg");
+        background-position: top center;
+        background-color: rgba(#000, .2);
+        background-blend-mode: darken;
+        position: relative;
+        #house-info {
+            position: absolute;
+            top: 10%;
+            left:5%;
+            width: 20%;
+            .header {
                 .card-title {
-                    color: $white-text;
+                    @include card-title();
+                }
+            }
+            .address {
+                padding: 20px 0;
+                text-align: center;
+                font-size: 1.5em;
+            }
+            .count {
+                display: flex;
+                .big-number {
+                    @include stat-big-num();
+                    flex: 1;
+                    margin: 0 10px;
+                }
+            }
+        }
+        .section-link {
+            display: block;
+            position: relative;
+            z-index: 100;
+            polygon {
+                stroke-width: 0.5px;
+                fill: rgba(255, 255, 255, .1);
+                stroke: rgba(255, 255, 255, .1);
+            }
+            .section-label {
+                display: block;
+                position: absolute;
+            }
+            &:hover {
+                polygon {
+                    stroke: $brand-purple;
+                    fill: rgba($brand-purple, .3);
+                }
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.section-page {
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    .card {
+        .header {
+            width: 35%;
+            .card-title {
+                @include card-title();
+                font-size: 2em;
+            }
+        }
+        .content {
+            .card-apartaments {
+                @include card-apartaments();
+                &::after {
+                    filter: brightness(75%);
+                    @include card-bg(info);
+                    transition: filter .3s ease-in-out;
+                }
+                &:hover {
+                    &::after {
+                        filter: brightness(100%);
+                    }
+                }
+            }
+            #plan-view {
+                height: 720px;
+                display: flex;
+                justify-content: center;
+                img {
+                    height: 90%;
                 }
             }
         }
     }
-	footer {
-		transform: translateY(100%);
-	}
 }
 
-.house-page {
-    background-image: asset-url("geometry-bg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    .main-raised {
-        margin-top: 0;
-        margin-bottom: 30px;
-        .house-title, .house-address {
-            text-align: center;
-        }
-        .house-title {
-            line-height: 2em;
-        }
-        .stat {
-            @include stat-big-num();
-        }
-        .floor {
-            h2 {
-                text-align: center;
-            }
-        }
-        .apartaments {
-            margin: 20px 0;
-	        .nav {
-		        margin: 20px 0;
-	        }
-            .card-apartaments {
-                @include card-apartaments();
-            }
-        }
-    }
-}
-
-.card-apartaments {
-    @include card-apartaments();
-}
-
-.section-link:focus {
-    outline: none;
-}

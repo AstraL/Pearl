@@ -10,7 +10,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 gem "font-awesome-rails"
+gem 'rails_admin_grid', github: 'jprberlin/rails_admin_grid'
 gem 'rails_admin_material_theme', '~> 0.2.0'
+
 gem 'rails_admin', '~> 1.0'
 gem "carrierwave"
 gem "rmagick"
@@ -18,8 +20,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'normalize-rails'
 gem 'devise'
 gem 'puma'
-gem 'lightbox2-rails'
-gem 'jquery-turbolinks'
+gem 'friendly_id', '~> 5.1.0'
+
 
 group :development do
 	gem 'annotate'

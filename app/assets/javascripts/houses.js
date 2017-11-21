@@ -11,3 +11,9 @@ $('.house-link').hover(function(){
 $('.house-link.disabled').click(function(e) {
     e.preventDefault();
 });
+
+$('.card-apartaments').click(function(e) {
+    var img = $(this).data("img");
+
+    $('#plan-view img').attr('src', img);
+});

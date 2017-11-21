@@ -13,11 +13,14 @@
 #  access        :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  section_id    :integer
 #  house_id      :integer
 #
 
+
 class Apartament < ApplicationRecord
 	include ApartamentAdmin
+	belongs_to :section
 	belongs_to :house
 
 	mount_uploader :image, ApartamentUploader

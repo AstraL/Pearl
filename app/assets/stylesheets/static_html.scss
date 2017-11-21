@@ -6,25 +6,7 @@
     #complex {
         background-image: asset-url("complex-bg.jpg");
     }
-    #complex-selectable {
-        background-image: asset-url("complex-bg-slogan.jpg");
-        background-position: top center;
-	    height: 100vh;
-        a.section-link {
-            z-index: 100;
-            polygon {
-                stroke-width: 1px;
-                fill: rgba(255, 255, 255, .1);
-                stroke: rgba(255, 255, 255, .1);
-            }
-            &:hover {
-                polygon {
-                    stroke: $brand-purple;
-                    fill: rgba($brand-purple, .3);
-                }
-            }
-        }
-    }
+
     #intro, #complex {
         background-position: bottom center;
         background-attachment: fixed;
@@ -125,7 +107,6 @@
 		padding: 40px;
         &.main-raised {
             margin: 0 30px 0;
-            opacity: .9;
             transition: margin .3s ease-in-out;
         }
 	}
@@ -297,7 +278,7 @@
 // CONTACTS
 #map {
 	@include margin-top();
-	height: 90vh;
+	height: calc(100vh - 74px);
 	position: relative;
 }
 

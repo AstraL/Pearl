@@ -1,0 +1,13 @@
+<div class="col-sm-6">
+    <div class="card card-apartaments" data-img="<%= ap.image.url %>">
+        <div class="content">
+            <h1 class="card-title">
+                <%= ap.total_space %> м<sup>2</sup>
+            </h1>
+            <ul>
+                <li>Кількість кімнат: <b><%= ap.rooms.to_s %></b></li>
+            </ul>
+            <%#= link_to 'Проглянути', (image_path("planing/section1/37-1r.jpg")), data: {lightbox: 'planing'}, class: 'btn btn-primary' %>
+        </div>
+    </div>
+</div>

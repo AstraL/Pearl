@@ -1,63 +1,32 @@
-<% content_for :class, 'index-page house-page navbar-color-on-scroll' %>
-<div id="complex-selectable" class="header">
+<% content_for :class, 'house-page navbar-color-on-scroll' %>
+<div id="complex-selectable">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1444 904" enable-background="new 0 0 1444 904" xml:space="preserve">
-        <a href="#!" data-toggle="modal" data-target="#section1-modal" class="section-link">
-            <polygon id="section_1" stroke-miterlimit="10" points="1285.4,588.5 1265,618.5 1255.8,616.3 1239.5,611.5 1254.6,589 1328,308
-		1314,303.5 1300.9,301 1304.5,287.5 1288,285 1231,274 1235.8,257.6 1195.4,252.4 1209,242.5 1215.5,243.5 1225.8,233.5 1227,226
-		1241,215.5 1256.5,218.5 1264.5,208.5 1329.5,220 1335.7,212.9 1385,221 1384,228.5 1396.9,230.2 1394.5,236.5 1405.3,240
-		1398.5,255 1406.6,257.5 1366,390.5 1325.9,526.3"/>
-        </a>
-        <a href="#!" data-toggle="modal" data-target="#section2-modal" class="section-link">
-            <polygon id="section_2" points="1225.5,625.5 1180.9,686.2 995,625.5 1021.5,358 1032,347 1035.2,303.6 1093.5,260 1140.5,269
-		1135,272.5 1145,275 1149,261.7 1166.5,247 1233.5,259 1226.5,297.5 1259,304 1300.9,301 1328,308 1254.6,589 1239.5,611.5
-		1229.5,625.5"/>
-        </a>
-        <a href="#!" data-toggle="modal" data-target="#section3-modal" class="section-link">
-            <polygon fill="none" points="763.9,581.1 759.5,400.5 759.5,336.5 770,323 770,299 840.5,250 891,259.5 891,252.5 916.3,238.7
-		976.5,251.5 974.4,284.8 999,289.5 1009.5,282.5 1054.4,292.3 1032.9,310.4 1028.5,347.5 1021.5,358 995,625.5 956.5,665.5
-		922.5,655 914.5,661.5 881.5,649.5 856.5,639.5 824.5,629.5 824.5,588.5 811.4,598.1"/>
-        </a>
-        <a href="#!" data-toggle="modal" data-target="#section4-modal" class="section-link">
-            <polygon fill="none" points="591.5,259 608.5,251.5 608.5,247 664,223.5 664,216 670.5,216 702.5,221.1 702,216 731.5,202.5
-		783,213.5 784.5,238.7 792.5,241 784.8,243.7 810.5,250 818.5,244.5 840.5,250 770,299 769.5,338 759.5,349 759.5,415.5 764,577
-		668.5,544 609.2,525.2 608.5,517 606.2,498.5 586,343.5 581.8,308.6 581.4,302.4 578.5,302.5 576,290 594,279.6"/>
-        </a>
-        <a href="#!" data-toggle="modal" data-target="#section5-modal" class="section-link">
-            <polygon fill="none" points="906.9,243.8 891,252.5 891,259.5 818.5,244.5 810.5,250 784.8,243.7 783,213.5 731.5,202.5 702,216
-		672,213 792.9,159.9 813.2,163.3 823.5,159 860.5,165 883,176.5 906.9,181"/>
-        </a>
-        <a href="#!"data-toggle="modal" data-target="#section6-modal"  class="section-link">
-            <polygon fill="none" points="982,284 974.4,284.8 976.5,251.5 916.3,238.7 906.9,243.8 906.9,181 887,188.5 860.5,184 860.5,167.5
-		826,159 818.5,162.5 795.5,159 849,136 882.5,122 903.5,124.5 918,118 951.5,124 953,131.5 990.5,137.5 986.5,196.5 980,265
-		984,265.6"/>
-        </a>
+        <% @house.sections.each do |s| %>
+            <%= link_to house_section_path(@house, s), class: 'section-link' do %>
+                <polygon id="section_<%= s.index.to_s %>" stroke-miterlimit="10" points="<%= s.points %>"></polygon>
+            <% end %>
+        <% end %>
     </svg>
-</div>
-<div class="container">
-    <div class="main main-raised">
-        <%= content_tag :h1, @house.title, class: 'house-title' %>
-        <%= content_tag :h3, @house.address, class: 'house-address' %>
-        <div class="row">
-            <div class="col-md-3 col-md-offset-2 stat">
-                <div class="counter">
-                    <span class="number">
-                        6
-                    </span>
-                    <p>Кількість секцій</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-md-offset-2 stat">
-                <div class="counter">
-                    <span class="number">
-                        10
-                    </span>
-                    <p>Кількість поверхів</p>
-                </div>
-            </div>
+    <div id="house-info" class="card card-raised card-nav-tabs">
+        <div class="header header-primary">
+            <%= content_tag(:h4, @house.title, class: 'card-title') %>
         </div>
-        <div class="row house-image">
-            <div class="col-md-10 col-md-offset-1">
-                <%= image_tag 'conception/conception3.jpg', class: 'img-responsive img-rounded img-raised' %>
+        <div class="content">
+            <%= link_to @house.image.url, class: 'house-image' do %>
+                <%= image_tag(@house.image.thumb.url, class: 'img-responsive img-raised img-rounded') %>
+            <% end %>
+            <div class="address">
+                <%= fa_icon "map-marker", text: @house.address %>
+            </div>
+            <div class="count">
+                <div class="big-number">
+                    <%= content_tag(:span, @house.sections.count.to_s, class: 'number') %>
+                    <p>Секцій</p>
+                </div>
+                <div class="big-number">
+                    <%= content_tag(:span, '10', class: 'number') %>
+                    <p>Поверхів</p>
+                </div>
             </div>
         </div>
     </div>

@@ -11,6 +11,7 @@
 #  updated_at :datetime         not null
 #
 
+
 class Feedback < ApplicationRecord
 
 	validates_presence_of :name, :email, :phone, :message

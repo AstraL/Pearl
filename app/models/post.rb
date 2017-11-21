@@ -12,6 +12,7 @@
 #  updated_at :datetime         not null
 #
 
+
 class Post < ApplicationRecord
 	include PostAdmin
 

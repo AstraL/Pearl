@@ -10,6 +10,9 @@ ru:
       house:
         one: "Очередь"
         other: "Очереди"
+      section:
+        one: "Секция"
+        other: "Секции"
       apartament:
         one: "Квартира"
         other: "Квартиры"
@@ -31,3 +34,7 @@ ru:
         last_sign_in_ip: "Последний IP"
         created_at: "Создан"
         updated_at: "Обновлён"
+      house:
+        title: 'Название'
+        address: 'Адрес'
+        active: 'Активно'

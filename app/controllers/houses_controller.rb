@@ -8,6 +8,6 @@ class HousesController < ApplicationController
 	private
 
 	def set_house
-		@house = House.find(params[:id])
+		@house = House.friendly.find(params[:id])
 	end
 end
