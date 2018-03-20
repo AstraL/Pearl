@@ -21,6 +21,7 @@ gem 'normalize-rails'
 gem 'devise'
 gem 'puma'
 gem 'friendly_id', '~> 5.1.0'
+gem 'pg'
 
 
 group :development do
@@ -36,10 +37,7 @@ group :development do
 	gem 'capistrano-rails',   require: false
 	gem 'capistrano-bundler', require: false
 	gem 'capistrano3-puma',   require: false
-end
-
-group :production do
-	gem 'pg'
+	#gem 'capistrano-db-tasks', '0.4', require: false
 end
 
 
