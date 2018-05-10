@@ -21,12 +21,11 @@ gem 'normalize-rails'
 gem 'devise'
 gem 'puma'
 gem 'friendly_id', '~> 5.1.0'
-gem 'pg'
+gem 'pg', '~> 0.21'
 
 
 group :development do
 	gem 'annotate'
-	gem 'sqlite3'
 	gem 'byebug'
 	gem 'web-console', '~> 2.0'
 	gem 'spring'
@@ -37,7 +36,7 @@ group :development do
 	gem 'capistrano-rails',   require: false
 	gem 'capistrano-bundler', require: false
 	gem 'capistrano3-puma',   require: false
-	#gem 'capistrano-db-tasks', '0.4', require: false
+	gem "capistrano-db-tasks", require: false
 end
 
 
