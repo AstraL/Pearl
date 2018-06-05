@@ -148,6 +148,9 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                .img-responsive {
+                    max-height: 100%;
+                }
             }
         }
     }
