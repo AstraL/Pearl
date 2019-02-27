@@ -1,10 +1,9 @@
-require 'capistrano-db-tasks'
 # Change these
-server '95.46.44.97', port: 22, roles: [:web, :app, :db], primary: true
+server 'prod1.quatrohost.pro', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:AstraL/Pearl.git'
 set :application,     'pearl'
-set :user,            'deploy'
+set :user,            'administrator'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -36,8 +35,6 @@ set :linked_files, %w{config/database.yml config/secrets.yml}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 #set :db_dump_dir, "./db"
-set :assets_dir, %w(public/uploads)
-set :local_assets_dir, %w(public/uploads)
 
 namespace :puma do
 	desc 'Create Directories for Puma Pids and Socket'
