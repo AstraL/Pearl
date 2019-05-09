@@ -1,9 +1,9 @@
 # Change these
-server 'prod1.quatrohost.pro', port: 22, roles: [:web, :app, :db], primary: true
+server '165.22.94.104', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:AstraL/Pearl.git'
 set :application,     'pearl'
-set :user,            'administrator'
+set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
